@@ -1,0 +1,37 @@
+#!/bin/bash
+cd ~/minimap2
+
+REF=Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa
+
+# 確認 fasta 存在
+if [ ! -f "$REF" ]; then
+    mv ~/Drosophila_melanogaster.BDGP6.46.dna.toplevel.fa* . 2>/dev/null
+fi
+ls -la $REF
+
+# 建 index
+./minimap2 -x map-ont -d fly.mmi $REF 2>&1 | tail -5
+
+# 產生 query
+awk '/^>/{next} 
+     {print "@r"NR; print $0; print "+"; 
+      q=""; for(i=0;i<length($0);i++) q=q"I"; 
+      print q}' $REF > query_base.fq
+
+# 複製 20 次讓 minimap2 跑
+for i in $(seq 1 20); do cat query_base.fq; done > query.fq
+echo "Query: $(wc -l < query.fq) lines"
+echo ""
+
+run_experiment() {
+    local mode=$1
+    echo "=========================================="
+    echo "=== Test: $mode ==="
+    echo "=========================================="
+    echo $mode | sudo tee /sys/kernel/mm/transparent_hugepage/enabled > /dev/null
+    echo "THP: $(cat /sys/kernel/mm/transparent_hugepage/enabled)"
+    echo ""
+    
+    START=$(date +%s.%N)
+    ./minimap2 -ax map-ont -t 4 fly.mmi query.fq > /dev/null 2>&1 &
+    PID=$!

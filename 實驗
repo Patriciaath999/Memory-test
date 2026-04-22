@@ -1,0 +1,53 @@
+cd ~/minimap2
+
+run_experiment() {
+    local mode=$1
+    echo "=========================================="
+    echo "=== Test: $mode ==="
+    echo "=========================================="
+    echo $mode | sudo tee /sys/kernel/mm/transparent_hugepage/enabled > /dev/null
+    echo "Current THP setting: $(cat /sys/kernel/mm/transparent_hugepage/enabled)"
+    echo ""
+    
+    # 計時開始
+    START=$(date +%s.%N)
+    ./minimap2 -ax map-ont -t 4 fly.mmi query.fq > /dev/null 2>&1 &
+    PID=$!
+    echo "PID: $PID"
+    echo ""
+    printf "%4s  %10s  %10s  %10s  %6s\n" "t(s)" "RSS(kB)" "Anon(kB)" "AnonHuge" "Huge%"
+    echo "-----------------------------------------------------------"
+    
+    for i in $(seq 1 120); do
+        if [ ! -d /proc/$PID ]; then break; fi
+        ANON_HUGE=$(awk '/^AnonHugePages:/ {sum+=$2} END {print sum+0}' /proc/$PID/smaps 2>/dev/null)
+        ANON=$(awk '/^Anonymous:/ {sum+=$2} END {print sum+0}' /proc/$PID/smaps 2>/dev/null)
+        RSS=$(awk '/^Rss:/ {sum+=$2} END {print sum+0}' /proc/$PID/smaps 2>/dev/null)
+        if [ "$ANON" -gt 0 ]; then
+            PCT=$(awk "BEGIN {printf \"%.1f\", $ANON_HUGE * 100 / $ANON}")
+        else
+            PCT="0.0"
+        fi
+        printf "%4d  %10d  %10d  %10d  %5s%%\n" "$i" "$RSS" "$ANON" "$ANON_HUGE" "$PCT"
+        sleep 1
+    done
+    wait $PID 2>/dev/null
+    
+    END=$(date +%s.%N)
+    WALL=$(awk "BEGIN {printf \"%.2f\", $END - $START}")
+    echo ""
+    echo "Wall time: ${WALL}s"
+    echo ""
+}
+
+# === Test 1: madvise（預設）===
+run_experiment madvise
+
+# === Test 2: always ===
+run_experiment always
+
+# === 還原 ===
+echo madvise | sudo tee /sys/kernel/mm/transparent_hugepage/enabled > /dev/null
+echo "=========================================="
+echo "Restored to: $(cat /sys/kernel/mm/transparent_hugepage/enabled)"
+echo "=========================================="

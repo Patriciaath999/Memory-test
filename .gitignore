@@ -1,0 +1,9 @@
+*.data
+*.paf
+*.out
+*.fna.gz
+*.fna
+*.fa
+*.fa.gz
+perf.data*
+GCA_*

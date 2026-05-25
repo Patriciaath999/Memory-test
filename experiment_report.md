@@ -119,22 +119,16 @@ Chandra et al. 對 Human-Human dataset 進行 profiling，得出 minimap2 的 CP
 | Marking primary chains | 3% | `mm_set_parent` | **19.51%** |
 | Base-to-base alignment | 31% | `mm_align1`, `ksw_extd2_sse` | **29.98%** |
 
-### 關鍵觀察：mm_set_parent 的異常 cache 行為
+### 對照：CPU 時間分布 vs L1D cache refill 分布
 
-`mm_set_parent` 在 CPU 時間中僅佔 **3%**，但在 L1D cache refill 中卻佔 **19.51%**，兩者相差超過 6 倍。這表示：
+注意兩份數據來自不同硬體（CPU 型號未必相同），以下對照僅供參考，不直接推論 cache 效率比值。
 
-- `mm_set_parent` 的**每 CPU cycle cache miss 率極高**，屬於典型的 pointer-chasing / 隨機記憶體存取模式。
-- 相比之下，`ksw_extd2_sse`（DP alignment）的 CPU 時間比例（~19%）與 L1D miss 比例（~19%）幾乎相同，屬於計算密集型、存取規律。
-- Chaining（`mg_lchain_rmq`）佔 56% CPU 時間，但只產生 41.7% 的 L1D miss，顯示 RMQ 資料結構在 cache 效率上優於 `mm_set_parent` 的存取模式。
-
-| 函式 | CPU 時間佔比（Chandra） | L1D cache refill 佔比（本實驗） | Cache miss 相對密度 |
-|------|:---:|:---:|:---:|
-| `mm_set_parent` | 3% | 19.51% | **6.5×**（cache-inefficient） |
-| `mg_lchain_rmq` | 56% | 41.70% | 0.74×（尚可） |
-| `mm_align1` / `ksw_extd2_sse` | ~31% | 29.98% | ~1.0×（cache-neutral） |
-| `collect_seed_hits` | ~10% | 4.34% | 0.43×（cache-friendly） |
-
-> **結論：** `mm_set_parent` 雖然 CPU 時間佔比極低，卻是 cache 壓力最不成比例的函式，是記憶體存取優化的優先候選目標。
+| 函式 | CPU 時間佔比（Chandra） | L1D cache refill 佔比（本實驗） |
+|------|:---:|:---:|
+| `mm_set_parent` | 3% | 19.51% |
+| `mg_lchain_rmq` | 56% | 41.70% |
+| `mm_align1` / `ksw_extd2_sse` | ~31% | 29.98% |
+| `collect_seed_hits` | ~10% | 4.34% |
 
 ---
 
@@ -148,9 +142,9 @@ Chandra et al. 對 Human-Human dataset 進行 profiling，得出 minimap2 的 CP
 | dTLB miss rate（中位數） | **4.14%** |
 | L2 TLB 命中率（佔 L1 TLB miss） | **~92.2%**（僅 7.8% 需 page table walk） |
 | 最大 cache refill hotspot | **mg_lchain_rmq 41.7%**（RMQ 資料結構隨機存取） |
-| 最異常 cache/CPU 比值 | **mm_set_parent**：CPU 3% 但 L1D miss 19.5%（6.5× 不成比例） |
+| 次大 hotspot | **mm_align1 / ksw_extd2_sse 29.98%**（DP alignment） |
 
 **下一步建議：**
-- 優先調查 `mm_set_parent`（19.5% L1D miss / 3% CPU）的存取模式，考慮資料結構重排以提升 locality。
 - 針對 `mg_lchain_rmq`（41.7%）的 RMQ 資料結構考慮 cache-oblivious layout 或 prefetch。
+- 評估 `mm_set_parent`（19.5% L1D miss）的存取模式；如需與論文數據比較，須確認 CPU 型號一致。
 - 開啟 HugePage（THP = always）後重跑，觀察 TLB refill 是否顯著下降（預期可降低 dTLB-load-misses）。

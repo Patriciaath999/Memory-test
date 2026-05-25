@@ -32,14 +32,14 @@
 
 ## 執行時間與記憶體
 
-| 指標 | exp_20260520<br>（Run 1） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>平均 |
+| 指標 | exp_20260520<br>（Run 1） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>中位數 |
 |------|:---:|:---:|:---:|:---:|:---:|
-| Real time (s) | 3,260.574 | 3,179.396 | 3,180.639 | 3,180.497 | **3,180.18** |
-| CPU time (s) | 9,275.989 | 9,047.752 | 9,047.883 | 9,048.878 | **9,048.17** |
-| Elapsed (s) | — | 3,179.834 | 3,181.031 | 3,180.984 | **3,180.62** |
-| User (s) | — | 8,954.289 | 8,953.908 | 8,955.476 | **8,954.56** |
-| Sys (s) | — | 93.897 | 94.364 | 93.884 | **94.05** |
-| Peak RSS (GB) | 29.754 | 29.854 | 29.856 | 29.878 | **29.863** |
+| Real time (s) | 3,260.574 | 3,179.396 | 3,180.639 | 3,180.497 | **3,180.497** |
+| CPU time (s) | 9,275.989 | 9,047.752 | 9,047.883 | 9,048.878 | **9,047.883** |
+| Elapsed (s) | — | 3,179.834 | 3,181.031 | 3,180.984 | **3,180.984** |
+| User (s) | — | 8,954.289 | 8,953.908 | 8,955.476 | **8,954.289** |
+| Sys (s) | — | 93.897 | 94.364 | 93.884 | **93.897** |
+| Peak RSS (GB) | 29.754 | 29.854 | 29.856 | 29.878 | **29.856** |
 
 > **備註：** exp_20260520 Real time 比 exp_20260523 慢約 80 s（+2.5%），推測為 perf record 本身的 overhead（perf.data 8,147 MB）。
 
@@ -47,24 +47,24 @@
 
 ## Cache Refill 計數
 
-| 計數器 | exp_20260520<br>（approx. event count） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>平均 |
+| 計數器 | exp_20260520<br>（approx. event count） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>中位數 |
 |--------|:---:|:---:|:---:|:---:|:---:|
-| L1D cache refill | ~320,752,880,949 | 313,485,656,391 | 313,523,572,214 | 313,603,161,803 | **313,537,463,469** |
-| L2D cache refill | N/A（未量測） | 156,895,236,783 | 161,970,789,519 | 158,101,547,700 | **158,989,191,334** |
+| L1D cache refill | ~320,752,880,949 | 313,485,656,391 | 313,523,572,214 | 313,603,161,803 | **313,523,572,214** |
+| L2D cache refill | N/A（未量測） | 156,895,236,783 | 161,970,789,519 | 158,101,547,700 | **158,101,547,700** |
 
-> **L2D / L1D 比率（exp_20260523 平均）：** 158.99 B / 313.54 B ≈ **50.7%**，即約一半的 L1D miss 會繼續 miss L2D，進而存取 DRAM。
+> **L2D / L1D 比率（exp_20260523 中位數）：** 158.10 B / 313.52 B ≈ **50.4%**，即約一半的 L1D miss 會繼續 miss L2D，進而存取 DRAM。
 
 ---
 
 ## TLB Miss 計數（exp_20260523）
 
-| 計數器 | Run 1 | Run 2 | Run 3 | 平均 |
+| 計數器 | Run 1 | Run 2 | Run 3 | 中位數 |
 |--------|:---:|:---:|:---:|:---:|
-| L1D TLB refill | 189,331,038,200 | 190,850,042,986 | 188,834,087,559 | **189,671,722,915** |
-| L2D TLB refill | 14,805,876,498 | 14,789,953,483 | 14,812,311,075 | **14,802,713,685** |
-| dTLB-loads (total) | 4,576,198,172,135 | 4,576,219,240,288 | 4,576,461,095,985 | **4,576,292,836,136** |
-| dTLB-load-misses | 189,331,038,200 | 190,850,042,986 | 188,834,087,559 | **189,671,722,915** |
-| **dTLB miss rate** | **4.14%** | **4.17%** | **4.13%** | **4.15%** |
+| L1D TLB refill | 189,331,038,200 | 190,850,042,986 | 188,834,087,559 | **189,331,038,200** |
+| L2D TLB refill | 14,805,876,498 | 14,789,953,483 | 14,812,311,075 | **14,805,876,498** |
+| dTLB-loads (total) | 4,576,198,172,135 | 4,576,219,240,288 | 4,576,461,095,985 | **4,576,219,240,288** |
+| dTLB-load-misses | 189,331,038,200 | 190,850,042,986 | 188,834,087,559 | **189,331,038,200** |
+| **dTLB miss rate** | **4.14%** | **4.17%** | **4.13%** | **4.14%** |
 
 > **L1D TLB refill = dTLB-load-misses：** 兩者數值相同，表示 TLB miss 事件與 L1 DTLB refill 事件為同一計數器的不同名稱。L2 TLB refill（≈14.8 B）約為 L1 TLB refill 的 **7.8%**，代表多數 TLB miss 可由 L2 TLB 滿足，不需 page table walk。
 
@@ -72,9 +72,9 @@
 
 ## Page Fault 統計（vmstat diff）
 
-| 指標 | exp_20260520<br>（Run 1） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>平均 |
+| 指標 | exp_20260520<br>（Run 1） | exp_20260523<br>Run 1 | exp_20260523<br>Run 2 | exp_20260523<br>Run 3 | exp_20260523<br>中位數 |
 |------|:---:|:---:|:---:|:---:|:---:|
-| pgfault（Δ） | 322,976,822 | 32,462,345 | 32,683,459 | 32,267,690 | **32,471,165** |
+| pgfault（Δ） | 322,976,822 | 32,462,345 | 32,683,459 | 32,267,690 | **32,462,345** |
 | pgmajfault（Δ） | 14 | 152 | 208 | 95 | **152** |
 
 > **exp_20260520 pgfault 為 exp_20260523 的 ~10 倍：** exp_20260520 為首次 cold-cache run，大量 mmap page 尚未載入 page cache；exp_20260523 三次連續執行時 page cache 已預熱，minor fault 大幅減少。pgmajfault（disk I/O fault）反而在 exp_20260523 較高，可能因為連續執行間有部分 page 被回收。
@@ -106,19 +106,51 @@
 
 ---
 
+## 論文佐證：Chandra et al. (2024) — mm2-plus
+
+> Chandra, S. et al. (2024). **mm2-plus: a faster and more accurate long-read genome assembler aligner.** *bioRxiv.*
+
+Chandra et al. 對 Human-Human dataset 進行 profiling，得出 minimap2 的 CPU 時間分布：
+
+| 階段 | CPU 時間佔比 | 對應本實驗函式 | 本實驗 L1D cache refill % |
+|------|:---:|------|:---:|
+| Seeding | 10% | `collect_seed_hits`, `mm_idx_get` | 4.34% |
+| Chaining | 56% | `mg_lchain_rmq`（含 KRMQ 操作） | **41.70%** |
+| Marking primary chains | 3% | `mm_set_parent` | **19.51%** |
+| Base-to-base alignment | 31% | `mm_align1`, `ksw_extd2_sse` | **29.98%** |
+
+### 關鍵觀察：mm_set_parent 的異常 cache 行為
+
+`mm_set_parent` 在 CPU 時間中僅佔 **3%**，但在 L1D cache refill 中卻佔 **19.51%**，兩者相差超過 6 倍。這表示：
+
+- `mm_set_parent` 的**每 CPU cycle cache miss 率極高**，屬於典型的 pointer-chasing / 隨機記憶體存取模式。
+- 相比之下，`ksw_extd2_sse`（DP alignment）的 CPU 時間比例（~19%）與 L1D miss 比例（~19%）幾乎相同，屬於計算密集型、存取規律。
+- Chaining（`mg_lchain_rmq`）佔 56% CPU 時間，但只產生 41.7% 的 L1D miss，顯示 RMQ 資料結構在 cache 效率上優於 `mm_set_parent` 的存取模式。
+
+| 函式 | CPU 時間佔比（Chandra） | L1D cache refill 佔比（本實驗） | Cache miss 相對密度 |
+|------|:---:|:---:|:---:|
+| `mm_set_parent` | 3% | 19.51% | **6.5×**（cache-inefficient） |
+| `mg_lchain_rmq` | 56% | 41.70% | 0.74×（尚可） |
+| `mm_align1` / `ksw_extd2_sse` | ~31% | 29.98% | ~1.0×（cache-neutral） |
+| `collect_seed_hits` | ~10% | 4.34% | 0.43×（cache-friendly） |
+
+> **結論：** `mm_set_parent` 雖然 CPU 時間佔比極低，卻是 cache 壓力最不成比例的函式，是記憶體存取優化的優先候選目標。
+
+---
+
 ## 小結
 
 | 觀察 | 數值 |
 |------|------|
-| 平均 Real time（exp_20260523） | **3,180 s**（≈ 53 min） |
-| L1D cache refill / run | **~313.5 B** |
-| L2D cache refill / run | **~159.0 B**（L1D miss 中 ~51% 繼續 miss L2D） |
-| dTLB miss rate | **~4.15%** |
+| 中位數 Real time（exp_20260523） | **3,180.5 s**（≈ 53 min） |
+| L1D cache refill / run（中位數） | **313,523,572,214**（≈ 313.5 B） |
+| L2D cache refill / run（中位數） | **158,101,547,700**（≈ 158.1 B，L1D miss 中 ~50.4% 繼續 miss L2D） |
+| dTLB miss rate（中位數） | **4.14%** |
 | L2 TLB 命中率（佔 L1 TLB miss） | **~92.2%**（僅 7.8% 需 page table walk） |
 | 最大 cache refill hotspot | **mg_lchain_rmq 41.7%**（RMQ 資料結構隨機存取） |
-| 次大 hotspot | **mm_align1 / ksw_extd2_sse 29.98%**（DP alignment） |
+| 最異常 cache/CPU 比值 | **mm_set_parent**：CPU 3% 但 L1D miss 19.5%（6.5× 不成比例） |
 
 **下一步建議：**
+- 優先調查 `mm_set_parent`（19.5% L1D miss / 3% CPU）的存取模式，考慮資料結構重排以提升 locality。
 - 針對 `mg_lchain_rmq`（41.7%）的 RMQ 資料結構考慮 cache-oblivious layout 或 prefetch。
-- 評估 `mm_set_parent`（19.5%）的存取模式是否可透過資料重排降低 cache miss。
 - 開啟 HugePage（THP = always）後重跑，觀察 TLB refill 是否顯著下降（預期可降低 dTLB-load-misses）。

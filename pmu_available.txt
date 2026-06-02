@@ -1,0 +1,75 @@
+  bus-cycles                                         [Hardware event]
+  cache-misses                                       [Hardware event]
+  cache-references                                   [Hardware event]
+  cpu-cycles OR cycles                               [Hardware event]
+  stalled-cycles-backend OR idle-cycles-backend      [Hardware event]
+  stalled-cycles-frontend OR idle-cycles-frontend    [Hardware event]
+cache:
+  L1-dcache-loads OR armv8_pmuv3_0/L1-dcache-loads/
+  L1-dcache-load-misses OR armv8_pmuv3_0/L1-dcache-load-misses/
+  L1-icache-loads OR armv8_pmuv3_0/L1-icache-loads/
+  L1-icache-load-misses OR armv8_pmuv3_0/L1-icache-load-misses/
+  dTLB-loads OR armv8_pmuv3_0/dTLB-loads/
+  dTLB-load-misses OR armv8_pmuv3_0/dTLB-load-misses/
+  iTLB-loads OR armv8_pmuv3_0/iTLB-loads/
+  iTLB-load-misses OR armv8_pmuv3_0/iTLB-load-misses/
+  bus_cycles OR armv8_pmuv3_0/bus_cycles/            [Kernel PMU event]
+  cpu_cycles OR armv8_pmuv3_0/cpu_cycles/            [Kernel PMU event]
+  l1d_cache OR armv8_pmuv3_0/l1d_cache/              [Kernel PMU event]
+  l1d_cache_allocate OR armv8_pmuv3_0/l1d_cache_allocate/[Kernel PMU event]
+  l1d_cache_refill OR armv8_pmuv3_0/l1d_cache_refill/[Kernel PMU event]
+  l1d_cache_wb OR armv8_pmuv3_0/l1d_cache_wb/        [Kernel PMU event]
+  l1d_tlb OR armv8_pmuv3_0/l1d_tlb/                  [Kernel PMU event]
+  l1d_tlb_refill OR armv8_pmuv3_0/l1d_tlb_refill/    [Kernel PMU event]
+  l1i_cache OR armv8_pmuv3_0/l1i_cache/              [Kernel PMU event]
+  l1i_cache_refill OR armv8_pmuv3_0/l1i_cache_refill/[Kernel PMU event]
+  l1i_tlb OR armv8_pmuv3_0/l1i_tlb/                  [Kernel PMU event]
+  l1i_tlb_refill OR armv8_pmuv3_0/l1i_tlb_refill/    [Kernel PMU event]
+  l2d_cache OR armv8_pmuv3_0/l2d_cache/              [Kernel PMU event]
+  l2d_cache_allocate OR armv8_pmuv3_0/l2d_cache_allocate/[Kernel PMU event]
+  l2d_cache_refill OR armv8_pmuv3_0/l2d_cache_refill/[Kernel PMU event]
+  l2d_cache_wb OR armv8_pmuv3_0/l2d_cache_wb/        [Kernel PMU event]
+  l2d_tlb OR armv8_pmuv3_0/l2d_tlb/                  [Kernel PMU event]
+  l2d_tlb_refill OR armv8_pmuv3_0/l2d_tlb_refill/    [Kernel PMU event]
+  stall_backend OR armv8_pmuv3_0/stall_backend/      [Kernel PMU event]
+  stall_frontend OR armv8_pmuv3_0/stall_frontend/    [Kernel PMU event]
+  uncore_dmc/cnt_cycles/                             [Kernel PMU event]
+  l1d_cache_inval
+       [L1D cache invalidate. Unit: armv8_pmuv3_0]
+  l1d_cache_rd
+       [L1D cache access,read. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_inner
+       [L1D cache refill,inner. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_outer
+       [L1D cache refill,outer. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_rd
+       [L1D cache refill,read. Unit: armv8_pmuv3_0]
+  l1d_cache_refill_wr
+       [L1D cache refill,write. Unit: armv8_pmuv3_0]
+  l1d_cache_wb_clean
+       [L1D cache Write-Back,cleaning and coherency. Unit: armv8_pmuv3_0]
+  l1d_cache_wb_victim
+       [L1D cache Write-Back,victim. Unit: armv8_pmuv3_0]
+  l1d_cache_wr
+       [L1D cache access,write. Unit: armv8_pmuv3_0]
+  l1d_tlb_rd
+       [L1D tlb access,read. Unit: armv8_pmuv3_0]
+  l1d_tlb_refill_rd
+       [L1D tlb refill,read. Unit: armv8_pmuv3_0]
+  l1d_tlb_refill_wr
+       [L1D tlb refill,write. Unit: armv8_pmuv3_0]
+  l1d_tlb_wr
+       [L1D tlb access,write. Unit: armv8_pmuv3_0]
+  l2d_tlb_rd
+       [L2D cache access,read. Unit: armv8_pmuv3_0]
+  l2d_tlb_refill_rd
+       [L2D cache refill,read. Unit: armv8_pmuv3_0]
+  l2d_tlb_refill_wr
+       [L2D cache refill,write. Unit: armv8_pmuv3_0]
+  l2d_tlb_wr
+       [L2D cache access,write. Unit: armv8_pmuv3_0]
+       [1 if persistent memory installed otherwise 0. Unit: tool]
+  sdt_libc:memory_tcache_double_free                 [SDT event]
+  sdt_libc:memory_tunable_tcache_count               [SDT event]
+  sdt_libc:memory_tunable_tcache_max_bytes           [SDT event]
+  sdt_libc:memory_tunable_tcache_unsorted_limit      [SDT event]

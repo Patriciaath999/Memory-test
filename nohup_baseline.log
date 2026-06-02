@@ -1,0 +1,28 @@
+nohup: ignoring input
+=== Recording system environment ===
+Setting THP to never (force 4KB only)...
+THP enabled: always madvise [never]
+THP defrag:  always defer defer+madvise madvise [never]
+
+==========================================
+=== Starting run1 at Thu May 28 12:08:08 PM CST 2026 ===
+==========================================
+=== run1 finished at Thu May 28 01:01:13 PM CST 2026 ===
+
+==========================================
+=== Starting run2 at Thu May 28 01:01:13 PM CST 2026 ===
+==========================================
+=== run2 finished at Thu May 28 01:54:16 PM CST 2026 ===
+
+==========================================
+=== Starting run3 at Thu May 28 01:54:16 PM CST 2026 ===
+==========================================
+=== run3 finished at Thu May 28 02:47:20 PM CST 2026 ===
+THP restored to madvise (system default)
+
+===========================================
+All done. Output: exp_baseline_4kb_20260528_120808
+
+CRITICAL: Check SUMMARY.txt — every perf event must show (100.00%).
+If multiplexing occurred, results will be inaccurate.
+===========================================

@@ -1,0 +1,1351 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 896K of event 'stall_backend'
+# Event count (approx.): 6480631558301
+#
+# Children      Self  Symbol                                       IPC   [IPC Coverage]
+# ........  ........  ...........................................  ....................
+#
+    92.79%     0.00%  [.] start_thread                             -      -            
+            |          
+             --92.79%--start_thread
+                       |          
+                       |--91.90%--ktf_worker
+                       |          |          
+                       |           --91.60%--worker_for
+                       |                     mm_map_frag_core
+                       |                     |          
+                       |                     |--54.22%--align_regs (inlined)
+                       |                     |          align_regs (inlined)
+                       |                     |          |          
+                       |                     |           --54.22%--mm_align_skeleton
+                       |                     |                     |          
+                       |                     |                      --54.15%--mm_align1
+                       |                     |                                |          
+                       |                     |                                |--45.42%--mm_align_pair
+                       |                     |                                |          |          
+                       |                     |                                |           --45.42%--ksw_extd2_sse
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--16.12%--_mm_or_si128 (inlined)
+                       |                     |                                |                     |          vorrq_s32 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--7.44%--_mm_sub_epi8 (inlined)
+                       |                     |                                |                     |          vsubq_s8 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                       |                     |                                |                     |          vcgtq_s8 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--3.07%--_mm_and_si128 (inlined)
+                       |                     |                                |                     |          vandq_s32 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--1.61%--_mm_loadu_si128 (inlined)
+                       |                     |                                |                     |          vld1q_s32 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--1.26%--_mm_store_si128 (inlined)
+                       |                     |                                |                     |          vst1q_s32 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--0.89%--vextq_s8 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                       |                     |                                |                     |          vcltq_s8 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                       |                     |                                |                     |          vceqq_s8 (inlined)
+                       |                     |                                |                     |          
+                       |                     |                                |                      --0.60%--_mm_add_epi8 (inlined)
+                       |                     |                                |                                |          
+                       |                     |                                |                                 --0.60%--vaddq_s8 (inlined)
+                       |                     |                                |          
+                       |                     |                                |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                       |                     |                                |          |          
+                       |                     |                                |           --2.42%--collect_long_gaps
+                       |                     |                                |          
+                       |                     |                                |--2.42%--mm_filter_bad_seeds (inlined)
+                       |                     |                                |          |          
+                       |                     |                                |           --2.41%--collect_long_gaps
+                       |                     |                                |          
+                       |                     |                                |--1.36%--mm_test_zdrop (inlined)
+                       |                     |                                |          |          
+                       |                     |                                |           --1.34%--ksw_ll_i16
+                       |                     |                                |          
+                       |                     |                                |--1.13%--mm_align_pair
+                       |                     |                                |          |          
+                       |                     |                                |           --1.13%--ksw_extd2_sse
+                       |                     |                                |          
+                       |                     |                                 --1.11%--mm_split_reg
+                       |                     |                                           mm_reg_set_coor (inlined)
+                       |                     |                                           |          
+                       |                     |                                            --1.11%--mm_cal_fuzzy_len (inlined)
+                       |                     |          
+                       |                     |--30.11%--mg_lchain_rmq
+                       |                     |          |          
+                       |                     |          |--7.13%--krmq_erase_lc_elem
+                       |                     |          |          |          
+                       |                     |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+                       |                     |          |          
+                       |                     |          |--6.27%--krmq_insert_lc_elem
+                       |                     |          |          |          
+                       |                     |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+                       |                     |          |          
+                       |                     |          |--4.81%--krmq_rmq_lc_elem
+                       |                     |          |          
+                       |                     |          |--3.86%--mg_chain_backtrack
+                       |                     |          |          |          
+                       |                     |          |           --3.02%--mg_chain_bk_end
+                       |                     |          |          
+                       |                     |          |--2.23%--comput_sc_simple (inlined)
+                       |                     |          |          
+                       |                     |          |--1.98%--krmq_find_lc_elem
+                       |                     |          |          
+                       |                     |          |--1.21%--krmq_itr_next_bidir_lc_elem
+                       |                     |          |          
+                       |                     |           --0.74%--krmq_interval_lc_elem (inlined)
+                       |                     |          
+                       |                     |--3.05%--collect_seed_hits
+                       |                     |          |          
+                       |                     |           --1.47%--mm_collect_matches
+                       |                     |                     |          
+                       |                     |                      --1.38%--mm_seed_collect_all
+                       |                     |                                |          
+                       |                     |                                 --1.28%--mm_idx_get
+                       |                     |                                           |          
+                       |                     |                                            --1.02%--kh_get_idx (inlined)
+                       |                     |          
+                       |                     |--2.71%--chain_post (inlined)
+                       |                     |          |          
+                       |                     |           --2.70%--mm_set_parent
+                       |                     |          
+                       |                      --0.51%--compact_a
+                       |          
+                        --0.88%--ktp_worker
+                                  |          
+                                   --0.74%--worker_pipeline
+
+    92.03%     0.00%  [.] worker_for                               -      -            
+            |
+            ---mm_map_frag_core
+               |          
+               |--54.22%--align_regs (inlined)
+               |          align_regs (inlined)
+               |          |          
+               |           --54.22%--mm_align_skeleton
+               |                     |          
+               |                      --54.15%--mm_align1
+               |                                |          
+               |                                |--45.42%--mm_align_pair
+               |                                |          |          
+               |                                |           --45.42%--ksw_extd2_sse
+               |                                |                     |          
+               |                                |                     |--16.12%--_mm_or_si128 (inlined)
+               |                                |                     |          vorrq_s32 (inlined)
+               |                                |                     |          
+               |                                |                     |--7.44%--_mm_sub_epi8 (inlined)
+               |                                |                     |          vsubq_s8 (inlined)
+               |                                |                     |          
+               |                                |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+               |                                |                     |          vcgtq_s8 (inlined)
+               |                                |                     |          
+               |                                |                     |--3.07%--_mm_and_si128 (inlined)
+               |                                |                     |          vandq_s32 (inlined)
+               |                                |                     |          
+               |                                |                     |--1.61%--_mm_loadu_si128 (inlined)
+               |                                |                     |          vld1q_s32 (inlined)
+               |                                |                     |          
+               |                                |                     |--1.26%--_mm_store_si128 (inlined)
+               |                                |                     |          vst1q_s32 (inlined)
+               |                                |                     |          
+               |                                |                     |--0.89%--vextq_s8 (inlined)
+               |                                |                     |          
+               |                                |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+               |                                |                     |          vcltq_s8 (inlined)
+               |                                |                     |          
+               |                                |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+               |                                |                     |          vceqq_s8 (inlined)
+               |                                |                     |          
+               |                                |                      --0.60%--_mm_add_epi8 (inlined)
+               |                                |                                |          
+               |                                |                                 --0.60%--vaddq_s8 (inlined)
+               |                                |          
+               |                                |--2.42%--mm_filter_bad_seeds_alt (inlined)
+               |                                |          |          
+               |                                |           --2.42%--collect_long_gaps
+               |                                |          
+               |                                |--2.42%--mm_filter_bad_seeds (inlined)
+               |                                |          |          
+               |                                |           --2.41%--collect_long_gaps
+               |                                |          
+               |                                |--1.36%--mm_test_zdrop (inlined)
+               |                                |          |          
+               |                                |           --1.34%--ksw_ll_i16
+               |                                |          
+               |                                |--1.13%--mm_align_pair
+               |                                |          |          
+               |                                |           --1.13%--ksw_extd2_sse
+               |                                |          
+               |                                 --1.11%--mm_split_reg
+               |                                           mm_reg_set_coor (inlined)
+               |                                           |          
+               |                                            --1.11%--mm_cal_fuzzy_len (inlined)
+               |          
+               |--30.50%--mg_lchain_rmq
+               |          |          
+               |          |--7.13%--krmq_erase_lc_elem
+               |          |          |          
+               |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+               |          |          
+               |          |--6.27%--krmq_insert_lc_elem
+               |          |          |          
+               |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+               |          |          
+               |          |--4.81%--krmq_rmq_lc_elem
+               |          |          
+               |          |--4.24%--mg_chain_backtrack
+               |          |          |          
+               |          |           --3.02%--mg_chain_bk_end
+               |          |          
+               |          |--2.23%--comput_sc_simple (inlined)
+               |          |          
+               |          |--1.98%--krmq_find_lc_elem
+               |          |          
+               |          |--1.21%--krmq_itr_next_bidir_lc_elem
+               |          |          
+               |           --0.74%--krmq_interval_lc_elem (inlined)
+               |          
+               |--3.05%--collect_seed_hits
+               |          |          
+               |           --1.47%--mm_collect_matches
+               |                     |          
+               |                      --1.38%--mm_seed_collect_all
+               |                                |          
+               |                                 --1.28%--mm_idx_get
+               |                                           |          
+               |                                            --1.02%--kh_get_idx (inlined)
+               |          
+               |--2.71%--chain_post (inlined)
+               |          |          
+               |           --2.70%--mm_set_parent
+               |          
+                --0.51%--compact_a
+
+    92.03%     0.01%  [.] mm_map_frag_core                         -      -            
+            |          
+             --92.02%--mm_map_frag_core
+                       |          
+                       |--54.22%--align_regs (inlined)
+                       |          align_regs (inlined)
+                       |          |          
+                       |           --54.22%--mm_align_skeleton
+                       |                     |          
+                       |                      --54.15%--mm_align1
+                       |                                |          
+                       |                                |--45.42%--mm_align_pair
+                       |                                |          |          
+                       |                                |           --45.42%--ksw_extd2_sse
+                       |                                |                     |          
+                       |                                |                     |--16.12%--_mm_or_si128 (inlined)
+                       |                                |                     |          vorrq_s32 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--7.44%--_mm_sub_epi8 (inlined)
+                       |                                |                     |          vsubq_s8 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                       |                                |                     |          vcgtq_s8 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--3.07%--_mm_and_si128 (inlined)
+                       |                                |                     |          vandq_s32 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--1.61%--_mm_loadu_si128 (inlined)
+                       |                                |                     |          vld1q_s32 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--1.26%--_mm_store_si128 (inlined)
+                       |                                |                     |          vst1q_s32 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--0.89%--vextq_s8 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                       |                                |                     |          vcltq_s8 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                       |                                |                     |          vceqq_s8 (inlined)
+                       |                                |                     |          
+                       |                                |                      --0.60%--_mm_add_epi8 (inlined)
+                       |                                |                                |          
+                       |                                |                                 --0.60%--vaddq_s8 (inlined)
+                       |                                |          
+                       |                                |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                       |                                |          |          
+                       |                                |           --2.42%--collect_long_gaps
+                       |                                |          
+                       |                                |--2.42%--mm_filter_bad_seeds (inlined)
+                       |                                |          |          
+                       |                                |           --2.41%--collect_long_gaps
+                       |                                |          
+                       |                                |--1.36%--mm_test_zdrop (inlined)
+                       |                                |          |          
+                       |                                |           --1.34%--ksw_ll_i16
+                       |                                |          
+                       |                                |--1.13%--mm_align_pair
+                       |                                |          |          
+                       |                                |           --1.13%--ksw_extd2_sse
+                       |                                |          
+                       |                                 --1.11%--mm_split_reg
+                       |                                           mm_reg_set_coor (inlined)
+                       |                                           |          
+                       |                                            --1.11%--mm_cal_fuzzy_len (inlined)
+                       |          
+                       |--30.50%--mg_lchain_rmq
+                       |          |          
+                       |          |--7.13%--krmq_erase_lc_elem
+                       |          |          |          
+                       |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+                       |          |          
+                       |          |--6.27%--krmq_insert_lc_elem
+                       |          |          |          
+                       |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+                       |          |          
+                       |          |--4.81%--krmq_rmq_lc_elem
+                       |          |          
+                       |          |--4.24%--mg_chain_backtrack
+                       |          |          |          
+                       |          |           --3.02%--mg_chain_bk_end
+                       |          |          
+                       |          |--2.23%--comput_sc_simple (inlined)
+                       |          |          
+                       |          |--1.98%--krmq_find_lc_elem
+                       |          |          
+                       |          |--1.21%--krmq_itr_next_bidir_lc_elem
+                       |          |          
+                       |           --0.74%--krmq_interval_lc_elem (inlined)
+                       |          
+                       |--3.05%--collect_seed_hits
+                       |          |          
+                       |           --1.47%--mm_collect_matches
+                       |                     |          
+                       |                      --1.38%--mm_seed_collect_all
+                       |                                |          
+                       |                                 --1.28%--mm_idx_get
+                       |                                           |          
+                       |                                            --1.02%--kh_get_idx (inlined)
+                       |          
+                       |--2.71%--chain_post (inlined)
+                       |          |          
+                       |           --2.70%--mm_set_parent
+                       |          
+                        --0.51%--compact_a
+
+    91.94%     0.00%  [.] ktf_worker                               -      -            
+            |          
+             --91.94%--ktf_worker
+                       |          
+                        --91.64%--worker_for
+                                  mm_map_frag_core
+                                  |          
+                                  |--54.22%--align_regs (inlined)
+                                  |          align_regs (inlined)
+                                  |          |          
+                                  |           --54.22%--mm_align_skeleton
+                                  |                     |          
+                                  |                      --54.15%--mm_align1
+                                  |                                |          
+                                  |                                |--45.42%--mm_align_pair
+                                  |                                |          |          
+                                  |                                |           --45.42%--ksw_extd2_sse
+                                  |                                |                     |          
+                                  |                                |                     |--16.12%--_mm_or_si128 (inlined)
+                                  |                                |                     |          vorrq_s32 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--7.44%--_mm_sub_epi8 (inlined)
+                                  |                                |                     |          vsubq_s8 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                                  |                                |                     |          vcgtq_s8 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--3.07%--_mm_and_si128 (inlined)
+                                  |                                |                     |          vandq_s32 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--1.61%--_mm_loadu_si128 (inlined)
+                                  |                                |                     |          vld1q_s32 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--1.26%--_mm_store_si128 (inlined)
+                                  |                                |                     |          vst1q_s32 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--0.89%--vextq_s8 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                                  |                                |                     |          vcltq_s8 (inlined)
+                                  |                                |                     |          
+                                  |                                |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                                  |                                |                     |          vceqq_s8 (inlined)
+                                  |                                |                     |          
+                                  |                                |                      --0.60%--_mm_add_epi8 (inlined)
+                                  |                                |                                |          
+                                  |                                |                                 --0.60%--vaddq_s8 (inlined)
+                                  |                                |          
+                                  |                                |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                                  |                                |          |          
+                                  |                                |           --2.42%--collect_long_gaps
+                                  |                                |          
+                                  |                                |--2.42%--mm_filter_bad_seeds (inlined)
+                                  |                                |          |          
+                                  |                                |           --2.41%--collect_long_gaps
+                                  |                                |          
+                                  |                                |--1.36%--mm_test_zdrop (inlined)
+                                  |                                |          |          
+                                  |                                |           --1.34%--ksw_ll_i16
+                                  |                                |          
+                                  |                                |--1.13%--mm_align_pair
+                                  |                                |          |          
+                                  |                                |           --1.13%--ksw_extd2_sse
+                                  |                                |          
+                                  |                                 --1.11%--mm_split_reg
+                                  |                                           mm_reg_set_coor (inlined)
+                                  |                                           |          
+                                  |                                            --1.11%--mm_cal_fuzzy_len (inlined)
+                                  |          
+                                  |--30.11%--mg_lchain_rmq
+                                  |          |          
+                                  |          |--7.13%--krmq_erase_lc_elem
+                                  |          |          |          
+                                  |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+                                  |          |          
+                                  |          |--6.27%--krmq_insert_lc_elem
+                                  |          |          |          
+                                  |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+                                  |          |          
+                                  |          |--4.81%--krmq_rmq_lc_elem
+                                  |          |          
+                                  |          |--3.86%--mg_chain_backtrack
+                                  |          |          |          
+                                  |          |           --3.02%--mg_chain_bk_end
+                                  |          |          
+                                  |          |--2.23%--comput_sc_simple (inlined)
+                                  |          |          
+                                  |          |--1.98%--krmq_find_lc_elem
+                                  |          |          
+                                  |          |--1.21%--krmq_itr_next_bidir_lc_elem
+                                  |          |          
+                                  |           --0.74%--krmq_interval_lc_elem (inlined)
+                                  |          
+                                  |--3.05%--collect_seed_hits
+                                  |          |          
+                                  |           --1.47%--mm_collect_matches
+                                  |                     |          
+                                  |                      --1.38%--mm_seed_collect_all
+                                  |                                |          
+                                  |                                 --1.28%--mm_idx_get
+                                  |                                           |          
+                                  |                                            --1.02%--kh_get_idx (inlined)
+                                  |          
+                                  |--2.71%--chain_post (inlined)
+                                  |          |          
+                                  |           --2.70%--mm_set_parent
+                                  |          
+                                   --0.51%--compact_a
+
+    91.88%     0.00%  [.] thread_start                             -      -            
+            |
+            ---start_thread
+               |          
+               |--91.00%--ktf_worker
+               |          |          
+               |           --90.70%--worker_for
+               |                     mm_map_frag_core
+               |                     |          
+               |                     |--54.22%--align_regs (inlined)
+               |                     |          align_regs (inlined)
+               |                     |          |          
+               |                     |           --54.22%--mm_align_skeleton
+               |                     |                     |          
+               |                     |                      --54.15%--mm_align1
+               |                     |                                |          
+               |                     |                                |--45.42%--mm_align_pair
+               |                     |                                |          |          
+               |                     |                                |           --45.42%--ksw_extd2_sse
+               |                     |                                |                     |          
+               |                     |                                |                     |--16.12%--_mm_or_si128 (inlined)
+               |                     |                                |                     |          vorrq_s32 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--7.44%--_mm_sub_epi8 (inlined)
+               |                     |                                |                     |          vsubq_s8 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+               |                     |                                |                     |          vcgtq_s8 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--3.07%--_mm_and_si128 (inlined)
+               |                     |                                |                     |          vandq_s32 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--1.61%--_mm_loadu_si128 (inlined)
+               |                     |                                |                     |          vld1q_s32 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--1.26%--_mm_store_si128 (inlined)
+               |                     |                                |                     |          vst1q_s32 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--0.89%--vextq_s8 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+               |                     |                                |                     |          vcltq_s8 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+               |                     |                                |                     |          vceqq_s8 (inlined)
+               |                     |                                |                     |          
+               |                     |                                |                      --0.60%--_mm_add_epi8 (inlined)
+               |                     |                                |                                |          
+               |                     |                                |                                 --0.60%--vaddq_s8 (inlined)
+               |                     |                                |          
+               |                     |                                |--2.42%--mm_filter_bad_seeds_alt (inlined)
+               |                     |                                |          |          
+               |                     |                                |           --2.42%--collect_long_gaps
+               |                     |                                |          
+               |                     |                                |--2.42%--mm_filter_bad_seeds (inlined)
+               |                     |                                |          |          
+               |                     |                                |           --2.41%--collect_long_gaps
+               |                     |                                |          
+               |                     |                                |--1.36%--mm_test_zdrop (inlined)
+               |                     |                                |          |          
+               |                     |                                |           --1.34%--ksw_ll_i16
+               |                     |                                |          
+               |                     |                                |--1.13%--mm_align_pair
+               |                     |                                |          |          
+               |                     |                                |           --1.13%--ksw_extd2_sse
+               |                     |                                |          
+               |                     |                                 --1.11%--mm_split_reg
+               |                     |                                           mm_reg_set_coor (inlined)
+               |                     |                                           |          
+               |                     |                                            --1.11%--mm_cal_fuzzy_len (inlined)
+               |                     |          
+               |                     |--30.11%--mg_lchain_rmq
+               |                     |          |          
+               |                     |          |--7.13%--krmq_erase_lc_elem
+               |                     |          |          |          
+               |                     |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+               |                     |          |          
+               |                     |          |--6.27%--krmq_insert_lc_elem
+               |                     |          |          |          
+               |                     |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+               |                     |          |          
+               |                     |          |--4.81%--krmq_rmq_lc_elem
+               |                     |          |          
+               |                     |          |--3.86%--mg_chain_backtrack
+               |                     |          |          |          
+               |                     |          |           --3.02%--mg_chain_bk_end
+               |                     |          |          
+               |                     |          |--2.23%--comput_sc_simple (inlined)
+               |                     |          |          
+               |                     |          |--1.98%--krmq_find_lc_elem
+               |                     |          |          
+               |                     |          |--1.21%--krmq_itr_next_bidir_lc_elem
+               |                     |          |          
+               |                     |           --0.74%--krmq_interval_lc_elem (inlined)
+               |                     |          
+               |                     |--2.71%--chain_post (inlined)
+               |                     |          |          
+               |                     |           --2.70%--mm_set_parent
+               |                     |          
+               |                      --2.57%--collect_seed_hits
+               |                                |          
+               |                                 --1.47%--mm_collect_matches
+               |                                           |          
+               |                                            --1.38%--mm_seed_collect_all
+               |                                                      |          
+               |                                                       --1.28%--mm_idx_get
+               |                                                                 |          
+               |                                                                  --1.02%--kh_get_idx (inlined)
+               |          
+                --0.88%--ktp_worker
+                          |          
+                           --0.74%--worker_pipeline
+
+    54.22%     0.00%  [.] align_regs (inlined)                     -      -            
+            |
+            ---align_regs (inlined)
+               |          
+                --54.22%--mm_align_skeleton
+                          |          
+                           --54.15%--mm_align1
+                                     |          
+                                     |--45.42%--mm_align_pair
+                                     |          |          
+                                     |           --45.42%--ksw_extd2_sse
+                                     |                     |          
+                                     |                     |--16.12%--_mm_or_si128 (inlined)
+                                     |                     |          vorrq_s32 (inlined)
+                                     |                     |          
+                                     |                     |--7.44%--_mm_sub_epi8 (inlined)
+                                     |                     |          vsubq_s8 (inlined)
+                                     |                     |          
+                                     |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                                     |                     |          vcgtq_s8 (inlined)
+                                     |                     |          
+                                     |                     |--3.07%--_mm_and_si128 (inlined)
+                                     |                     |          vandq_s32 (inlined)
+                                     |                     |          
+                                     |                     |--1.61%--_mm_loadu_si128 (inlined)
+                                     |                     |          vld1q_s32 (inlined)
+                                     |                     |          
+                                     |                     |--1.26%--_mm_store_si128 (inlined)
+                                     |                     |          vst1q_s32 (inlined)
+                                     |                     |          
+                                     |                     |--0.89%--vextq_s8 (inlined)
+                                     |                     |          
+                                     |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                                     |                     |          vcltq_s8 (inlined)
+                                     |                     |          
+                                     |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                                     |                     |          vceqq_s8 (inlined)
+                                     |                     |          
+                                     |                      --0.60%--_mm_add_epi8 (inlined)
+                                     |                                |          
+                                     |                                 --0.60%--vaddq_s8 (inlined)
+                                     |          
+                                     |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                                     |          |          
+                                     |           --2.42%--collect_long_gaps
+                                     |          
+                                     |--2.42%--mm_filter_bad_seeds (inlined)
+                                     |          |          
+                                     |           --2.41%--collect_long_gaps
+                                     |          
+                                     |--1.36%--mm_test_zdrop (inlined)
+                                     |          |          
+                                     |           --1.34%--ksw_ll_i16
+                                     |          
+                                     |--1.13%--mm_align_pair
+                                     |          |          
+                                     |           --1.13%--ksw_extd2_sse
+                                     |          
+                                      --1.11%--mm_split_reg
+                                                mm_reg_set_coor (inlined)
+                                                |          
+                                                 --1.11%--mm_cal_fuzzy_len (inlined)
+
+    54.22%     0.00%  [.] align_regs (inlined)                     -      -            
+            |          
+             --54.22%--mm_align_skeleton
+                       |          
+                        --54.15%--mm_align1
+                                  |          
+                                  |--45.42%--mm_align_pair
+                                  |          |          
+                                  |           --45.42%--ksw_extd2_sse
+                                  |                     |          
+                                  |                     |--16.12%--_mm_or_si128 (inlined)
+                                  |                     |          vorrq_s32 (inlined)
+                                  |                     |          
+                                  |                     |--7.44%--_mm_sub_epi8 (inlined)
+                                  |                     |          vsubq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                                  |                     |          vcgtq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--3.07%--_mm_and_si128 (inlined)
+                                  |                     |          vandq_s32 (inlined)
+                                  |                     |          
+                                  |                     |--1.61%--_mm_loadu_si128 (inlined)
+                                  |                     |          vld1q_s32 (inlined)
+                                  |                     |          
+                                  |                     |--1.26%--_mm_store_si128 (inlined)
+                                  |                     |          vst1q_s32 (inlined)
+                                  |                     |          
+                                  |                     |--0.89%--vextq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                                  |                     |          vcltq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                                  |                     |          vceqq_s8 (inlined)
+                                  |                     |          
+                                  |                      --0.60%--_mm_add_epi8 (inlined)
+                                  |                                |          
+                                  |                                 --0.60%--vaddq_s8 (inlined)
+                                  |          
+                                  |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                                  |          |          
+                                  |           --2.42%--collect_long_gaps
+                                  |          
+                                  |--2.42%--mm_filter_bad_seeds (inlined)
+                                  |          |          
+                                  |           --2.41%--collect_long_gaps
+                                  |          
+                                  |--1.36%--mm_test_zdrop (inlined)
+                                  |          |          
+                                  |           --1.34%--ksw_ll_i16
+                                  |          
+                                  |--1.13%--mm_align_pair
+                                  |          |          
+                                  |           --1.13%--ksw_extd2_sse
+                                  |          
+                                   --1.11%--mm_split_reg
+                                             mm_reg_set_coor (inlined)
+                                             |          
+                                              --1.11%--mm_cal_fuzzy_len (inlined)
+
+    54.22%     0.04%  [.] mm_align_skeleton                        -      -            
+            |          
+             --54.18%--mm_align_skeleton
+                       |          
+                        --54.15%--mm_align1
+                                  |          
+                                  |--45.42%--mm_align_pair
+                                  |          |          
+                                  |           --45.42%--ksw_extd2_sse
+                                  |                     |          
+                                  |                     |--16.12%--_mm_or_si128 (inlined)
+                                  |                     |          vorrq_s32 (inlined)
+                                  |                     |          
+                                  |                     |--7.44%--_mm_sub_epi8 (inlined)
+                                  |                     |          vsubq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                                  |                     |          vcgtq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--3.07%--_mm_and_si128 (inlined)
+                                  |                     |          vandq_s32 (inlined)
+                                  |                     |          
+                                  |                     |--1.61%--_mm_loadu_si128 (inlined)
+                                  |                     |          vld1q_s32 (inlined)
+                                  |                     |          
+                                  |                     |--1.26%--_mm_store_si128 (inlined)
+                                  |                     |          vst1q_s32 (inlined)
+                                  |                     |          
+                                  |                     |--0.89%--vextq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                                  |                     |          vcltq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                                  |                     |          vceqq_s8 (inlined)
+                                  |                     |          
+                                  |                      --0.60%--_mm_add_epi8 (inlined)
+                                  |                                |          
+                                  |                                 --0.60%--vaddq_s8 (inlined)
+                                  |          
+                                  |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                                  |          |          
+                                  |           --2.42%--collect_long_gaps
+                                  |          
+                                  |--2.42%--mm_filter_bad_seeds (inlined)
+                                  |          |          
+                                  |           --2.41%--collect_long_gaps
+                                  |          
+                                  |--1.36%--mm_test_zdrop (inlined)
+                                  |          |          
+                                  |           --1.34%--ksw_ll_i16
+                                  |          
+                                  |--1.13%--mm_align_pair
+                                  |          |          
+                                  |           --1.13%--ksw_extd2_sse
+                                  |          
+                                   --1.11%--mm_split_reg
+                                             mm_reg_set_coor (inlined)
+                                             |          
+                                              --1.11%--mm_cal_fuzzy_len (inlined)
+
+    54.15%     0.10%  [.] mm_align1                                -      -            
+            |          
+             --54.05%--mm_align1
+                       |          
+                       |--45.42%--mm_align_pair
+                       |          |          
+                       |           --45.42%--ksw_extd2_sse
+                       |                     |          
+                       |                     |--16.12%--_mm_or_si128 (inlined)
+                       |                     |          vorrq_s32 (inlined)
+                       |                     |          
+                       |                     |--7.44%--_mm_sub_epi8 (inlined)
+                       |                     |          vsubq_s8 (inlined)
+                       |                     |          
+                       |                     |--7.21%--_mm_cmpgt_epi8 (inlined)
+                       |                     |          vcgtq_s8 (inlined)
+                       |                     |          
+                       |                     |--3.07%--_mm_and_si128 (inlined)
+                       |                     |          vandq_s32 (inlined)
+                       |                     |          
+                       |                     |--1.61%--_mm_loadu_si128 (inlined)
+                       |                     |          vld1q_s32 (inlined)
+                       |                     |          
+                       |                     |--1.26%--_mm_store_si128 (inlined)
+                       |                     |          vst1q_s32 (inlined)
+                       |                     |          
+                       |                     |--0.89%--vextq_s8 (inlined)
+                       |                     |          
+                       |                     |--0.87%--_mm_cmplt_epi8 (inlined)
+                       |                     |          vcltq_s8 (inlined)
+                       |                     |          
+                       |                     |--0.86%--_mm_cmpeq_epi8 (inlined)
+                       |                     |          vceqq_s8 (inlined)
+                       |                     |          
+                       |                      --0.60%--_mm_add_epi8 (inlined)
+                       |                                |          
+                       |                                 --0.60%--vaddq_s8 (inlined)
+                       |          
+                       |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                       |          |          
+                       |           --2.42%--collect_long_gaps
+                       |          
+                       |--2.41%--mm_filter_bad_seeds (inlined)
+                       |          collect_long_gaps
+                       |          
+                       |--1.35%--mm_test_zdrop (inlined)
+                       |          |          
+                       |           --1.34%--ksw_ll_i16
+                       |          
+                       |--1.13%--mm_align_pair
+                       |          |          
+                       |           --1.13%--ksw_extd2_sse
+                       |          
+                        --1.11%--mm_split_reg
+                                  mm_reg_set_coor (inlined)
+                                  |          
+                                   --1.11%--mm_cal_fuzzy_len (inlined)
+
+    46.56%     0.00%  [.] mm_align_pair                            -      -            
+            |          
+             --46.56%--mm_align_pair
+                       |          
+                        --46.55%--ksw_extd2_sse
+                                  |          
+                                  |--16.50%--_mm_or_si128 (inlined)
+                                  |          vorrq_s32 (inlined)
+                                  |          
+                                  |--7.63%--_mm_sub_epi8 (inlined)
+                                  |          vsubq_s8 (inlined)
+                                  |          
+                                  |--7.41%--_mm_cmpgt_epi8 (inlined)
+                                  |          vcgtq_s8 (inlined)
+                                  |          
+                                  |--3.16%--_mm_and_si128 (inlined)
+                                  |          vandq_s32 (inlined)
+                                  |          
+                                  |--1.64%--_mm_loadu_si128 (inlined)
+                                  |          vld1q_s32 (inlined)
+                                  |          
+                                  |--1.28%--_mm_store_si128 (inlined)
+                                  |          vst1q_s32 (inlined)
+                                  |          
+                                  |--0.91%--vextq_s8 (inlined)
+                                  |          
+                                  |--0.89%--_mm_cmplt_epi8 (inlined)
+                                  |          vcltq_s8 (inlined)
+                                  |          
+                                  |--0.89%--_mm_cmpeq_epi8 (inlined)
+                                  |          vceqq_s8 (inlined)
+                                  |          
+                                   --0.62%--_mm_add_epi8 (inlined)
+                                             |          
+                                              --0.62%--vaddq_s8 (inlined)
+
+    34.90%    34.69%  [.] ksw_extd2_sse                            -      -            
+            |          
+             --34.69%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       |          
+                        --34.69%--mm_align1
+                                  mm_align_pair
+                                  ksw_extd2_sse
+                                  |          
+                                  |--12.33%--_mm_or_si128 (inlined)
+                                  |          vorrq_s32 (inlined)
+                                  |          
+                                  |--5.71%--_mm_sub_epi8 (inlined)
+                                  |          vsubq_s8 (inlined)
+                                  |          
+                                  |--5.53%--_mm_cmpgt_epi8 (inlined)
+                                  |          vcgtq_s8 (inlined)
+                                  |          
+                                  |--2.38%--_mm_and_si128 (inlined)
+                                  |          vandq_s32 (inlined)
+                                  |          
+                                  |--1.25%--_mm_loadu_si128 (inlined)
+                                  |          vld1q_s32 (inlined)
+                                  |          
+                                  |--0.97%--_mm_store_si128 (inlined)
+                                  |          vst1q_s32 (inlined)
+                                  |          
+                                  |--0.69%--vextq_s8 (inlined)
+                                  |          
+                                  |--0.66%--_mm_cmplt_epi8 (inlined)
+                                  |          vcltq_s8 (inlined)
+                                  |          
+                                   --0.66%--_mm_cmpeq_epi8 (inlined)
+                                             vceqq_s8 (inlined)
+
+    30.50%     4.38%  [.] mg_lchain_rmq                            -      -            
+            |          
+            |--26.11%--mg_lchain_rmq
+            |          |          
+            |          |--7.13%--krmq_erase_lc_elem
+            |          |          |          
+            |          |           --3.82%--krmq_update_min_lc_elem (inlined)
+            |          |          
+            |          |--6.27%--krmq_insert_lc_elem
+            |          |          |          
+            |          |           --1.20%--krmq_update_min_lc_elem (inlined)
+            |          |          
+            |          |--4.81%--krmq_rmq_lc_elem
+            |          |          
+            |          |--4.24%--mg_chain_backtrack
+            |          |          |          
+            |          |           --3.02%--mg_chain_bk_end
+            |          |          
+            |          |--1.98%--krmq_find_lc_elem
+            |          |          
+            |           --1.21%--krmq_itr_next_bidir_lc_elem
+            |          
+             --4.38%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       |          
+                       |--2.23%--comput_sc_simple (inlined)
+                       |          
+                        --0.74%--krmq_interval_lc_elem (inlined)
+
+    16.50%     0.00%  [.] _mm_or_si128 (inlined)                   -      -            
+            |
+            ---vorrq_s32 (inlined)
+
+    16.50%     0.00%  [.] vorrq_s32 (inlined)                      -      -            
+    11.65%    11.58%  [.] ksw_extd2_sse                            -      -            
+            |          
+             --11.58%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       |          
+                        --11.58%--mm_align1
+                                  mm_align_pair
+                                  ksw_extd2_sse
+                                  |          
+                                  |--4.16%--_mm_or_si128 (inlined)
+                                  |          vorrq_s32 (inlined)
+                                  |          
+                                  |--1.91%--_mm_sub_epi8 (inlined)
+                                  |          vsubq_s8 (inlined)
+                                  |          
+                                  |--1.87%--_mm_cmpgt_epi8 (inlined)
+                                  |          vcgtq_s8 (inlined)
+                                  |          
+                                   --0.78%--_mm_and_si128 (inlined)
+                                             vandq_s32 (inlined)
+
+     7.95%     7.81%  [.] rs_sort_128x                             -      -            
+            |          
+            |--6.63%--rs_sort_128x
+            |          |          
+            |           --6.63%--rs_sort_128x
+            |          
+             --0.61%--start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+
+     7.63%     0.00%  [.] _mm_sub_epi8 (inlined)                   -      -            
+            |
+            ---vsubq_s8 (inlined)
+
+     7.63%     0.00%  [.] vsubq_s8 (inlined)                       -      -            
+     7.41%     0.00%  [.] _mm_cmpgt_epi8 (inlined)                 -      -            
+            |
+            ---vcgtq_s8 (inlined)
+
+     7.41%     0.00%  [.] vcgtq_s8 (inlined)                       -      -            
+     7.13%     7.05%  [.] krmq_erase_lc_elem                       -      -            
+            |          
+             --7.05%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       krmq_erase_lc_elem
+                       |          
+                        --3.81%--krmq_update_min_lc_elem (inlined)
+
+     6.27%     6.23%  [.] krmq_insert_lc_elem                      -      -            
+            |          
+             --6.23%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       krmq_insert_lc_elem
+                       |          
+                        --1.20%--krmq_update_min_lc_elem (inlined)
+
+     4.82%     4.82%  [.] collect_long_gaps                        -      -            
+            |          
+             --4.82%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       mm_align1
+                       |          
+                       |--2.42%--mm_filter_bad_seeds_alt (inlined)
+                       |          collect_long_gaps
+                       |          
+                        --2.41%--mm_filter_bad_seeds (inlined)
+                                  collect_long_gaps
+
+     4.81%     4.81%  [.] krmq_rmq_lc_elem                         -      -            
+            |          
+             --4.81%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       krmq_rmq_lc_elem
+
+     4.24%     0.74%  [.] mg_chain_backtrack                       -      -            
+            |          
+            |--3.50%--mg_chain_backtrack
+            |          |          
+            |           --3.02%--mg_chain_bk_end
+            |          
+             --0.74%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+
+     3.90%     0.00%  [.] krmq_update_min_lc_elem (inlined)        -      -            
+     3.16%     0.00%  [.] _mm_and_si128 (inlined)                  -      -            
+            |
+            ---vandq_s32 (inlined)
+
+     3.16%     0.00%  [.] vandq_s32 (inlined)                      -      -            
+     3.02%     3.02%  [.] mg_chain_bk_end                          -      -            
+            |          
+             --3.02%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+                       mg_chain_bk_end
+
+     2.71%     0.00%  [.] chain_post (inlined)                     -      -            
+            |          
+             --2.70%--mm_set_parent
+
+     2.70%     2.70%  [.] mm_set_parent                            -      -            
+            |          
+             --2.70%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       |          
+                        --2.70%--chain_post (inlined)
+                                  mm_set_parent
+
+     2.42%     0.00%  [.] mm_filter_bad_seeds_alt (inlined)        -      -            
+            |          
+             --2.42%--collect_long_gaps
+
+     2.42%     0.00%  [.] mm_filter_bad_seeds (inlined)            -      -            
+            |          
+             --2.41%--collect_long_gaps
+
+     2.36%     0.69%  [.] collect_seed_hits                        -      -            
+            |          
+            |--1.66%--collect_seed_hits
+            |          |          
+            |           --1.13%--mm_collect_matches
+            |                     |          
+            |                      --1.06%--mm_seed_collect_all
+            |                                |          
+            |                                 --0.98%--mm_idx_get
+            |                                           |          
+            |                                            --0.78%--kh_get_idx (inlined)
+            |          
+             --0.69%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+
+     2.23%     0.00%  [.] comput_sc_simple (inlined)               -      -            
+     1.98%     1.98%  [.] krmq_find_lc_elem                        -      -            
+            |          
+             --1.98%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       krmq_find_lc_elem
+
+     1.64%     0.00%  [.] vld1q_s32 (inlined)                      -      -            
+     1.64%     0.00%  [.] _mm_loadu_si128 (inlined)                -      -            
+            |
+            ---vld1q_s32 (inlined)
+
+     1.38%     0.04%  [.] mm_seed_collect_all                      -      -            
+            |          
+             --1.34%--mm_seed_collect_all
+                       |          
+                        --1.28%--mm_idx_get
+                                  |          
+                                   --1.02%--kh_get_idx (inlined)
+
+     1.36%     0.00%  [.] mm_test_zdrop (inlined)                  -      -            
+            |          
+             --1.34%--ksw_ll_i16
+
+     1.29%     0.00%  [.] vst1q_s32 (inlined)                      -      -            
+     1.28%     0.00%  [.] _mm_store_si128 (inlined)                -      -            
+            |
+            ---vst1q_s32 (inlined)
+
+     1.28%     1.28%  [.] mm_idx_get                               -      -            
+            |          
+             --1.28%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+                       mm_collect_matches
+                       mm_seed_collect_all
+                       mm_idx_get
+                       |          
+                        --1.02%--kh_get_idx (inlined)
+
+     1.23%     0.00%  [.] krmq_update_min_lc_elem (inlined)        -      -            
+     1.21%     1.21%  [.] krmq_itr_next_bidir_lc_elem              -      -            
+            |          
+             --1.21%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       krmq_itr_next_bidir_lc_elem
+
+     1.13%     0.05%  [.] mm_collect_matches                       -      -            
+            |          
+             --1.08%--mm_collect_matches
+                       |          
+                        --1.06%--mm_seed_collect_all
+                                  |          
+                                   --0.98%--mm_idx_get
+                                             |          
+                                              --0.78%--kh_get_idx (inlined)
+
+     1.11%     1.11%  [.] mm_split_reg                             -      -            
+            |          
+             --1.11%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       mm_align1
+                       mm_split_reg
+                       mm_reg_set_coor (inlined)
+                       |          
+                        --1.11%--mm_cal_fuzzy_len (inlined)
+
+     1.11%     0.00%  [.] mm_reg_set_coor (inlined)                -      -            
+            |          
+             --1.11%--mm_cal_fuzzy_len (inlined)
+
+     1.11%     0.00%  [.] mm_cal_fuzzy_len (inlined)               -      -            
+     1.04%     1.03%  [.] ksw_ll_i16                               -      -            
+            |          
+             --1.03%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       |          
+                        --1.03%--mm_align1
+                                  mm_test_zdrop (inlined)
+                                  ksw_ll_i16
+
+     1.02%     0.00%  [.] kh_get_idx (inlined)                     -      -            
+     0.97%     0.00%  [k] el0t_64_sync                             -      -            
+            |
+            ---el0t_64_sync_handler
+               |          
+                --0.74%--el0_da
+                          |          
+                           --0.69%--do_mem_abort
+                                     |          
+                                      --0.68%--do_translation_fault
+                                                |          
+                                                 --0.68%--do_page_fault
+                                                           |          
+                                                            --0.59%--handle_mm_fault
+                                                                      |          
+                                                                       --0.57%--__handle_mm_fault
+                                                                                 |          
+                                                                                  --0.56%--handle_pte_fault
+                                                                                            |          
+                                                                                             --0.54%--do_anonymous_page
+
+     0.97%     0.00%  [k] el0t_64_sync_handler                     -      -            
+            |          
+             --0.74%--el0_da
+                       |          
+                        --0.69%--do_mem_abort
+                                  |          
+                                   --0.68%--do_translation_fault
+                                             |          
+                                              --0.68%--do_page_fault
+                                                        |          
+                                                         --0.59%--handle_mm_fault
+                                                                   |          
+                                                                    --0.57%--__handle_mm_fault
+                                                                              |          
+                                                                               --0.56%--handle_pte_fault
+                                                                                         |          
+                                                                                          --0.54%--do_anonymous_page
+
+     0.91%     0.00%  [.] vextq_s8 (inlined)                       -      -            
+     0.89%     0.00%  [.] _mm_cmplt_epi8 (inlined)                 -      -            
+            |
+            ---vcltq_s8 (inlined)
+
+     0.89%     0.00%  [.] vcltq_s8 (inlined)                       -      -            
+     0.89%     0.00%  [.] _mm_cmpeq_epi8 (inlined)                 -      -            
+            |
+            ---vceqq_s8 (inlined)
+
+     0.89%     0.00%  [.] vceqq_s8 (inlined)                       -      -            
+     0.88%     0.00%  [.] ktp_worker                               -      -            
+            |          
+             --0.74%--worker_pipeline
+
+     0.74%     0.05%  [k] el0_da                                   -      -            
+            |          
+             --0.69%--el0_da
+                       |          
+                        --0.69%--do_mem_abort
+                                  |          
+                                   --0.68%--do_translation_fault
+                                             |          
+                                              --0.68%--do_page_fault
+                                                        |          
+                                                         --0.59%--handle_mm_fault
+                                                                   |          
+                                                                    --0.57%--__handle_mm_fault
+                                                                              |          
+                                                                               --0.56%--handle_pte_fault
+                                                                                         |          
+                                                                                          --0.54%--do_anonymous_page
+
+     0.74%     0.00%  [.] krmq_interval_lc_elem (inlined)          -      -            
+     0.74%     0.06%  [.] worker_pipeline                          -      -            
+            |          
+             --0.68%--worker_pipeline
+
+     0.70%     0.21%  [.] collect_seed_hits                        -      -            
+     0.69%     0.00%  [k] do_mem_abort                             -      -            
+            |          
+             --0.69%--do_mem_abort
+                       |          
+                        --0.68%--do_translation_fault
+                                  |          
+                                   --0.68%--do_page_fault
+                                             |          
+                                              --0.59%--handle_mm_fault
+                                                        |          
+                                                         --0.57%--__handle_mm_fault
+                                                                   |          
+                                                                    --0.56%--handle_pte_fault
+                                                                              |          
+                                                                               --0.54%--do_anonymous_page
+
+     0.69%     0.00%  [k] do_page_fault                            -      -            
+            |          
+             --0.68%--do_page_fault
+                       |          
+                        --0.59%--handle_mm_fault
+                                  |          
+                                   --0.58%--__handle_mm_fault
+                                             |          
+                                              --0.56%--handle_pte_fault
+                                                        |          
+                                                         --0.54%--do_anonymous_page
+
+     0.68%     0.00%  [k] do_translation_fault                     -      -            
+            |          
+             --0.68%--do_page_fault
+                       |          
+                        --0.59%--handle_mm_fault
+                                  |          
+                                   --0.57%--__handle_mm_fault
+                                             |          
+                                              --0.56%--handle_pte_fault
+                                                        |          
+                                                         --0.54%--do_anonymous_page
+
+     0.62%     0.00%  [.] _mm_add_epi8 (inlined)                   -      -            
+            |          
+             --0.62%--vaddq_s8 (inlined)
+
+     0.62%     0.00%  [.] vaddq_s8 (inlined)                       -      -            
+     0.59%     0.02%  [k] handle_mm_fault                          -      -            
+            |          
+             --0.58%--handle_mm_fault
+                       |          
+                        --0.58%--__handle_mm_fault
+                                  |          
+                                   --0.56%--handle_pte_fault
+                                             |          
+                                              --0.54%--do_anonymous_page
+
+     0.58%     0.01%  [k] __handle_mm_fault                        -      -            
+            |          
+             --0.57%--__handle_mm_fault
+                       |          
+                        --0.56%--handle_pte_fault
+                                  |          
+                                   --0.54%--do_anonymous_page
+
+     0.57%     0.00%  [k] handle_pte_fault                         -      -            
+            |          
+             --0.56%--handle_pte_fault
+                       |          
+                        --0.54%--do_anonymous_page
+
+     0.54%     0.01%  [k] do_anonymous_page                        -      -            
+            |          
+             --0.53%--do_anonymous_page
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

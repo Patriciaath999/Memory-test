@@ -1,0 +1,75 @@
+===========================================
+Baseline 4KB Experiment Summary
+Directory: exp_baseline_4kb_20260528_120808
+Completed at Thu May 28 02:47:20 PM CST 2026
+===========================================
+
+## Configuration
+THP: never (forced 4KB)
+Threads: 48
+NUMA: interleave=all
+Runs: 3
+
+## Perf events (should all show 100.00% coverage)
+cycles,instructions,stall_backend,stall_frontend,dTLB-load-misses,l2d_tlb_refill
+
+## Counter coverage check:
+--- Counter coverage check for run1 ---
+
+--- Counter coverage check for run2 ---
+
+--- Counter coverage check for run3 ---
+
+
+## Files generated:
+total 22M
+-rw-rw-r-- 1 nancy nancy  771 May 28 14:47 experiment.log
+-rw-rw-r-- 1 nancy nancy  353 May 28 13:01 meminfo_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  353 May 28 13:54 meminfo_after_run2.txt
+-rw-rw-r-- 1 nancy nancy  353 May 28 14:47 meminfo_after_run3.txt
+-rw-rw-r-- 1 nancy nancy  353 May 28 12:08 meminfo_before_run1.txt
+-rw-rw-r-- 1 nancy nancy  353 May 28 13:01 meminfo_before_run2.txt
+-rw-rw-r-- 1 nancy nancy  353 May 28 13:54 meminfo_before_run3.txt
+-rw-rw-r-- 1 nancy nancy  314 May 28 13:01 meminfo_diff_run1.txt
+-rw-rw-r-- 1 nancy nancy  314 May 28 13:54 meminfo_diff_run2.txt
+-rw-rw-r-- 1 nancy nancy  374 May 28 14:47 meminfo_diff_run3.txt
+-rw-rw-r-- 1 nancy nancy  970 May 28 13:01 minimap2_stderr_run1.txt
+-rw-rw-r-- 1 nancy nancy  970 May 28 13:54 minimap2_stderr_run2.txt
+-rw-rw-r-- 1 nancy nancy  970 May 28 14:47 minimap2_stderr_run3.txt
+-rw-rw-r-- 1 nancy nancy  123 May 28 14:47 multiplex_check.log
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 13:01 numastat_after_run1.txt
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 13:54 numastat_after_run2.txt
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 14:47 numastat_after_run3.txt
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 12:08 numastat_before_run1.txt
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 13:01 numastat_before_run2.txt
+-rw-rw-r-- 1 nancy nancy 2.6K May 28 13:54 numastat_before_run3.txt
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 13:01 output_run1.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 13:54 output_run2.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 14:47 output_run3.paf
+-rw-rw-r-- 1 nancy nancy  879 May 28 13:01 perf_stat_run1.txt
+-rw-rw-r-- 1 nancy nancy  879 May 28 13:54 perf_stat_run2.txt
+-rw-rw-r-- 1 nancy nancy  879 May 28 14:47 perf_stat_run3.txt
+-rw-rw-r-- 1 nancy nancy  35K May 28 13:01 pid_status_run1.log
+-rw-rw-r-- 1 nancy nancy  35K May 28 13:54 pid_status_run2.log
+-rw-rw-r-- 1 nancy nancy  35K May 28 14:47 pid_status_run3.log
+-rw-rw-r-- 1 nancy nancy   98 May 28 13:01 psi_after_run1.txt
+-rw-rw-r-- 1 nancy nancy   98 May 28 13:54 psi_after_run2.txt
+-rw-rw-r-- 1 nancy nancy   98 May 28 14:47 psi_after_run3.txt
+-rw-rw-r-- 1 nancy nancy   98 May 28 12:08 psi_before_run1.txt
+-rw-rw-r-- 1 nancy nancy   98 May 28 13:01 psi_before_run2.txt
+-rw-rw-r-- 1 nancy nancy   98 May 28 13:54 psi_before_run3.txt
+-rw-rw-r-- 1 nancy nancy  596 May 28 14:47 SUMMARY.txt
+-rw-rw-r-- 1 nancy nancy 7.4K May 28 12:08 system_info.txt
+-rw-rw-r-- 1 nancy nancy   66 May 28 12:08 thp_setting.txt
+-rw-rw-r-- 1 nancy nancy 1014 May 28 13:01 time_run1.txt
+-rw-rw-r-- 1 nancy nancy 1014 May 28 13:54 time_run2.txt
+-rw-rw-r-- 1 nancy nancy 1014 May 28 14:47 time_run3.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 13:01 vmstat_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 13:54 vmstat_after_run2.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 14:47 vmstat_after_run3.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 12:08 vmstat_before_run1.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 13:01 vmstat_before_run2.txt
+-rw-rw-r-- 1 nancy nancy  997 May 28 13:54 vmstat_before_run3.txt
+-rw-rw-r-- 1 nancy nancy   92 May 28 13:01 vmstat_diff_run1.txt
+-rw-rw-r-- 1 nancy nancy   92 May 28 13:54 vmstat_diff_run2.txt
+-rw-rw-r-- 1 nancy nancy   92 May 28 14:47 vmstat_diff_run3.txt

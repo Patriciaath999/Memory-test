@@ -1,0 +1,21 @@
+run1 started at Thu May 28 12:08:08 PM CST 2026
+minimap2 PID: 502800
+Watching actual PID: 502800
+minimap2 exit code: 0
+14099 output_run1.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 13:01 output_run1.paf
+=== run1 finished at Thu May 28 01:01:13 PM CST 2026 ===
+run2 started at Thu May 28 01:01:13 PM CST 2026
+minimap2 PID: 505810
+Watching actual PID: 505810
+minimap2 exit code: 0
+14099 output_run2.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 13:54 output_run2.paf
+=== run2 finished at Thu May 28 01:54:16 PM CST 2026 ===
+run3 started at Thu May 28 01:54:16 PM CST 2026
+minimap2 PID: 508770
+Watching actual PID: 508770
+minimap2 exit code: 0
+14099 output_run3.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 28 14:47 output_run3.paf
+=== run3 finished at Thu May 28 02:47:20 PM CST 2026 ===

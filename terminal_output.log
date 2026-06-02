@@ -1,0 +1,38 @@
+nohup: ignoring input
+=== Starting Run 1 at Sat May 23 05:40:33 PM CST 2026 ===
+
+real	52m59.932s
+user	149m14.297s
+sys	1m33.930s
+=== Finished Run 1 at Sat May 23 06:33:38 PM CST 2026 ===
+=== Starting Run 2 at Sat May 23 06:33:38 PM CST 2026 ===
+
+real	53m1.130s
+user	149m13.919s
+sys	1m34.394s
+=== Finished Run 2 at Sat May 23 07:26:45 PM CST 2026 ===
+=== Starting Run 3 at Sat May 23 07:26:45 PM CST 2026 ===
+
+real	53m1.077s
+user	149m15.483s
+sys	1m33.919s
+=== Finished Run 3 at Sat May 23 08:19:51 PM CST 2026 ===
+Done at Sat May 23 08:19:51 PM CST 2026
+total 22M
+-rw-rw-r-- 1 nancy nancy  388 May 23 20:19 experiment.log
+-rw-rw-r-- 1 nancy nancy 7.3M May 23 18:33 output_run1.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 23 19:26 output_run2.paf
+-rw-rw-r-- 1 nancy nancy 7.3M May 23 20:19 output_run3.paf
+-rw-rw-r-- 1 nancy nancy 1.8K May 23 18:33 perf_stat_run1.txt
+-rw-rw-r-- 1 nancy nancy 1.8K May 23 19:26 perf_stat_run2.txt
+-rw-rw-r-- 1 nancy nancy 1.8K May 23 20:19 perf_stat_run3.txt
+-rw-rw-r-- 1 nancy nancy  263 May 23 17:40 thp_policy.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 18:33 vmstat_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 19:26 vmstat_after_run2.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 20:19 vmstat_after_run3.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 17:40 vmstat_before_run1.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 18:33 vmstat_before_run2.txt
+-rw-rw-r-- 1 nancy nancy  788 May 23 19:26 vmstat_before_run3.txt
+-rw-rw-r-- 1 nancy nancy   92 May 23 18:33 vmstat_diff_run1.txt
+-rw-rw-r-- 1 nancy nancy   92 May 23 19:26 vmstat_diff_run2.txt
+-rw-rw-r-- 1 nancy nancy   92 May 23 20:19 vmstat_diff_run3.txt

@@ -1,0 +1,20 @@
+nohup: ignoring input
+Setting THP to never...
+
+==========================================
+=== Profiling event: stall_backend (stall_backend) ===
+==========================================
+=== stall_backend finished at Fri May 29 04:49:33 PM CST 2026 ===
+
+==========================================
+=== Profiling event: l2d_tlb_refill (page_walk) ===
+==========================================
+=== page_walk finished at Fri May 29 05:56:09 PM CST 2026 ===
+
+===========================================
+Done. Key outputs:
+  - SUMMARY.txt (quick view)
+  - report_stall_backend_by_symbol.txt
+  - report_page_walk_by_symbol.txt
+  - report_*_with_callgraph.txt (with caller chain)
+===========================================

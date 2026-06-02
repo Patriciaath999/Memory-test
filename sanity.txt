@@ -1,0 +1,23 @@
+[M::mm_idx_gen::66.158*1.72] collected minimizers
+[M::mm_idx_gen::69.331*2.50] sorted minimizers
+[M::main::69.332*2.50] loaded/built the index for 25 target sequence(s)
+[M::mm_mapopt_update::76.792*2.35] mid_occ = 177
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 25
+[M::mm_idx_stat::83.964*2.24] distinct minimizers: 215125355 (92.06% are singletons); average occurrences: 1.455; average spacing: 9.958; total length: 3117292070
+minimap2: Interrupt
+
+ Performance counter stats for 'minimap2 -t 48 -cx asm5 GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+ 4,525,052,819,178      cycles                                                                
+ 4,316,993,650,219      instructions                     #    0.95  insn per cycle            
+ 1,211,707,469,713      stall_backend                                                         
+   783,147,159,164      stall_frontend                                                        
+    42,308,946,691      dTLB-load-misses                                                      
+     8,874,873,576      l2d_tlb_refill                                                        
+
+     858.140040840 seconds time elapsed
+
+    1754.731002000 seconds user
+      53.860643000 seconds sys
+
+

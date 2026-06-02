@@ -1,0 +1,14 @@
+1,6c1,6
+< MemFree:        128080516 kB
+< Slab:            1268704 kB
+< SReclaimable:     141500 kB
+< SUnreclaim:      1127204 kB
+< PageTables:         7188 kB
+< SecPageTables:     10532 kB
+---
+> MemFree:        126168360 kB
+> Slab:            1275688 kB
+> SReclaimable:     147596 kB
+> SUnreclaim:      1128092 kB
+> PageTables:         8364 kB
+> SecPageTables:     10536 kB

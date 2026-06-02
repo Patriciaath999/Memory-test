@@ -1,0 +1,13 @@
+MemFree:        126294436 kB
+Slab:            1276612 kB
+SReclaimable:     150264 kB
+SUnreclaim:      1126348 kB
+PageTables:         7340 kB
+SecPageTables:     10532 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0

@@ -1,0 +1,18 @@
+# started on Thu May 28 13:01:18 2026
+
+
+ Performance counter stats for 'minimap2 -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+22,673,290,656,440      cycles                                                                
+20,334,531,602,862      instructions                     #    0.90  insn per cycle            
+ 6,498,296,192,460      stall_backend                                                         
+ 3,344,359,475,574      stall_frontend                                                        
+   188,895,500,194      dTLB-load-misses                                                      
+    14,817,770,578      l2d_tlb_refill                                                        
+
+    3177.665416808 seconds time elapsed
+
+    8957.996809000 seconds user
+      93.100537000 seconds sys
+
+

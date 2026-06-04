@@ -1,0 +1,33 @@
+### Date
+Thu Jun  4 11:11:19 AM CST 2026
+
+### Hardware
+Architecture:                            aarch64
+CPU op-mode(s):                          64-bit
+Byte Order:                              Little Endian
+CPU(s):                                  224
+On-line CPU(s) list:                     0-223
+Vendor ID:                               Cavium
+Model name:                              ThunderX2-99xx
+Model:                                   1
+Thread(s) per core:                      4
+Core(s) per socket:                      28
+Socket(s):                               2
+Stepping:                                0x1
+BogoMIPS:                                400.00
+Flags:                                   fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics cpuid asimdrdm
+L1d cache:                               1.8 MiB (56 instances)
+L1i cache:                               1.8 MiB (56 instances)
+L2 cache:                                14 MiB (56 instances)
+L3 cache:                                64 MiB (2 instances)
+NUMA node(s):                            2
+NUMA node0 CPU(s):                       0-111
+
+### THP setting (will be forced to never)
+always [madvise] never
+
+### minimap2
+2.30-r1299-dirty
+
+### perf
+perf version 6.14.11

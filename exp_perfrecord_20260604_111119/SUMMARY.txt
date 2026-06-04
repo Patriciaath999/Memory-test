@@ -1,0 +1,94 @@
+===========================================
+Per-Function Profiling Summary
+Directory: exp_perfrecord_20260604_111119
+Completed at Thu Jun  4 01:28:04 PM CST 2026
+===========================================
+
+## Control variables (same as baseline)
+THP: never
+Threads: 48
+NUMA: interleave=all
+Cold start: yes
+
+## Profiling overhead note
+perf record adds ~2.5% wall time overhead (sampling).
+This is INHERENT to perf record, not a methodology error.
+
+===========================================
+## TOP 20: Backend Stall Hotspots
+## (Who is the CPU waiting for?)
+===========================================
+=== Top 20 hotspots for stall_backend ===
+    92.79%     0.00%  [.] start_thread                           -      -            
+    92.03%     0.00%  [.] worker_for                             -      -            
+    92.03%     0.01%  [.] mm_map_frag_core                       -      -            
+    91.95%     0.00%  [.] ktf_worker                             -      -            
+    91.81%     0.00%  [.] thread_start                           -      -            
+    54.23%     0.00%  [.] align_regs (inlined)                   -      -            
+    54.23%     0.00%  [.] align_regs (inlined)                   -      -            
+    54.23%     0.04%  [.] mm_align_skeleton                      -      -            
+    54.16%     0.09%  [.] mm_align1                              -      -            
+    46.57%     0.00%  [.] mm_align_pair                          -      -            
+    46.56%    46.26%  [.] ksw_extd2_sse                          -      -            
+    30.50%     4.44%  [.] mg_lchain_rmq                          -      -            
+    16.50%     0.00%  [.] _mm_or_si128 (inlined)                 -      -            
+    16.50%     0.00%  [.] vorrq_s32 (inlined)                    -      -            
+     7.95%     7.80%  [.] rs_sort_128x                           -      -            
+     7.68%     0.00%  [.] _mm_sub_epi8 (inlined)                 -      -            
+     7.68%     0.00%  [.] vsubq_s8 (inlined)                     -      -            
+     7.45%     0.00%  [.] _mm_cmpgt_epi8 (inlined)               -      -            
+     7.45%     0.00%  [.] vcgtq_s8 (inlined)                     -      -            
+     7.10%     7.02%  [.] krmq_erase_lc_elem                     -      -            
+
+===========================================
+## TOP 20: Page Table Walk Hotspots
+## (Who is causing TLB pressure?)
+===========================================
+=== Top 20 hotspots for l2d_tlb_refill ===
+    98.90%     0.00%  [.] start_thread                                 -      -            
+    98.76%     0.00%  [.] thread_start                                 -      -            
+    96.97%     0.00%  [.] worker_for                                   -      -            
+    96.97%     0.01%  [.] mm_map_frag_core                             -      -            
+    96.97%     0.00%  [.] ktf_worker                                   -      -            
+    71.76%     0.00%  [.] chain_post (inlined)                         -      -            
+    71.76%    71.73%  [.] mm_set_parent                                -      -            
+    11.35%     0.52%  [.] mg_lchain_rmq                                -      -            
+     9.24%     2.58%  [.] mg_chain_backtrack                           -      -            
+     7.10%     1.72%  [.] collect_seed_hits                            -      -            
+     6.56%     6.56%  [.] mg_chain_bk_end                              -      -            
+     5.18%     0.06%  [.] mm_seed_collect_all                          -      -            
+     5.09%     5.09%  [.] mm_idx_get                                   -      -            
+     4.70%     0.00%  [.] align_regs (inlined)                         -      -            
+     4.70%     0.00%  [.] align_regs (inlined)                         -      -            
+     4.70%     0.02%  [.] mm_align_skeleton                            -      -            
+     4.66%     0.05%  [.] mm_align1                                    -      -            
+     4.39%     0.00%  [.] kh_get_idx (inlined)                         -      -            
+     3.99%     0.03%  [.] mm_collect_matches                           -      -            
+     2.22%     0.00%  [.] mm_align_pair                                -      -            
+
+## Files generated:
+total 13G
+-rw-rw-r-- 1 nancy nancy  534 Jun  4 13:28 experiment.log
+-rw-rw-r-- 1 nancy nancy 1.1K Jun  4 13:14 minimap2_stderr_page_walk.txt
+-rw-rw-r-- 1 nancy nancy 1.1K Jun  4 12:04 minimap2_stderr_stall_backend.txt
+-rw-rw-r-- 1 nancy nancy 7.3M Jun  4 13:14 output_page_walk.paf
+-rw-rw-r-- 1 nancy nancy 7.3M Jun  4 12:04 output_stall_backend.paf
+-rw------- 1 nancy nancy 5.7G Jun  4 13:14 perf_page_walk.data
+-rw------- 1 nancy nancy 7.2G Jun  4 12:04 perf_stall_backend.data
+-rw-rw-r-- 1 nancy nancy  39K Jun  4 13:21 report_page_walk_by_symbol.txt
+-rw-rw-r-- 1 nancy nancy  39K Jun  4 13:28 report_page_walk_with_callgraph.txt
+-rw-rw-r-- 1 nancy nancy  94K Jun  4 12:13 report_stall_backend_by_symbol.txt
+-rw-rw-r-- 1 nancy nancy  95K Jun  4 12:21 report_stall_backend_with_callgraph.txt
+-rw-rw-r-- 1 nancy nancy 4.4K Jun  4 13:28 SUMMARY.txt
+-rw-rw-r-- 1 nancy nancy 1.3K Jun  4 11:11 system_info.txt
+-rw-rw-r-- 1 nancy nancy   23 Jun  4 11:11 thp_setting.txt
+-rw-rw-r-- 1 nancy nancy  983 Jun  4 13:14 time_page_walk.txt
+-rw-rw-r-- 1 nancy nancy  987 Jun  4 12:04 time_stall_backend.txt
+-rw-rw-r-- 1 nancy nancy 1.9K Jun  4 13:28 top20_page_walk.txt
+-rw-rw-r-- 1 nancy nancy 1.8K Jun  4 12:21 top20_stall_backend.txt
+-rw-rw-r-- 1 nancy nancy  788 Jun  4 13:14 vmstat_after_page_walk.txt
+-rw-rw-r-- 1 nancy nancy  788 Jun  4 12:04 vmstat_after_stall_backend.txt
+-rw-rw-r-- 1 nancy nancy  788 Jun  4 12:21 vmstat_before_page_walk.txt
+-rw-rw-r-- 1 nancy nancy  788 Jun  4 11:11 vmstat_before_stall_backend.txt
+-rw-rw-r-- 1 nancy nancy   92 Jun  4 13:14 vmstat_diff_page_walk.txt
+-rw-rw-r-- 1 nancy nancy   92 Jun  4 12:04 vmstat_diff_stall_backend.txt

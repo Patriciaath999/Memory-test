@@ -1,0 +1,21 @@
+=== Top 20 hotspots for l2d_tlb_refill ===
+    98.87%     0.00%  [.] start_thread                                 -      -            
+    97.08%     0.00%  [.] thread_start                                 -      -            
+    96.90%     0.00%  [.] worker_for                                   -      -            
+    96.90%     0.01%  [.] mm_map_frag_core                             -      -            
+    96.90%     0.00%  [.] ktf_worker                                   -      -            
+    73.14%     0.00%  [.] chain_post (inlined)                         -      -            
+    73.13%    73.12%  [.] mm_set_parent                                -      -            
+     9.65%     0.07%  [.] mg_lchain_rmq                                -      -            
+     9.44%     2.60%  [.] mg_chain_backtrack                           -      -            
+     7.25%     1.76%  [.] collect_seed_hits                            -      -            
+     6.72%     6.72%  [.] mg_chain_bk_end                              -      -            
+     5.18%     5.18%  [.] mm_idx_get                                   -      -            
+     4.75%     0.02%  [.] mm_align_skeleton                            -      -            
+     4.75%     0.00%  [.] align_regs (inlined)                         -      -            
+     4.75%     0.00%  [.] align_regs (inlined)                         -      -            
+     4.72%     0.05%  [.] mm_align1                                    -      -            
+     4.46%     0.00%  [.] kh_get_idx (inlined)                         -      -            
+     4.08%     0.03%  [.] mm_collect_matches                           -      -            
+     4.03%     0.05%  [.] mm_seed_collect_all                          -      -            
+     2.23%     0.00%  [.] mm_align_pair                                -      -            

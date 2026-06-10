@@ -1,0 +1,21 @@
+=== Top 20 hotspots for stall_backend ===
+    92.39%     0.00%  [.] start_thread                            -      -            
+    91.59%     0.00%  [.] worker_for                              -      -            
+    91.59%     0.01%  [.] mm_map_frag_core                        -      -            
+    91.50%     0.00%  [.] ktf_worker                              -      -            
+    91.43%     0.00%  [.] thread_start                            -      -            
+    57.63%     0.00%  [.] align_regs (inlined)                    -      -            
+    57.63%     0.00%  [.] align_regs (inlined)                    -      -            
+    57.62%     0.04%  [.] mm_align_skeleton                       -      -            
+    57.55%     0.10%  [.] mm_align1                               -      -            
+    49.58%     0.00%  [.] mm_align_pair                           -      -            
+    31.57%    31.36%  [.] ksw_extd2_sse                           -      -            
+    26.26%     4.01%  [.] mg_lchain_rmq                           -      -            
+    18.01%    17.89%  [.] ksw_extd2_sse                           -      -            
+    17.30%     0.00%  [.] _mm_or_si128 (inlined)                  -      -            
+    17.30%     0.00%  [.] vorrq_s32 (inlined)                     -      -            
+     8.38%     8.21%  [.] rs_sort_128x                            -      -            
+     8.25%     0.00%  [.] _mm_sub_epi8 (inlined)                  -      -            
+     8.25%     0.00%  [.] vsubq_s8 (inlined)                      -      -            
+     8.00%     0.00%  [.] _mm_cmpgt_epi8 (inlined)                -      -            
+     8.00%     0.00%  [.] vcgtq_s8 (inlined)                      -      -            

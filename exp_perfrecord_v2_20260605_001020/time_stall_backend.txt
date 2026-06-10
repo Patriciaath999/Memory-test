@@ -1,0 +1,23 @@
+	Command being timed: "numactl --interleave=all perf record -F 99 -e stall_backend --call-graph dwarf -o perf_stall_backend.data -- /home/nancy/minimap2/minimap2 -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz"
+	User time (seconds): 8626.06
+	System time (seconds): 111.46
+	Percent of CPU this job got: 286%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 50:54.27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31395340
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 76
+	Minor (reclaiming a frame) page faults: 28690572
+	Voluntary context switches: 100652
+	Involuntary context switches: 31990
+	Swaps: 0
+	File system inputs: 3595032
+	File system outputs: 14422344
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

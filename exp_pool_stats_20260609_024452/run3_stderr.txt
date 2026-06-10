@@ -1,0 +1,31 @@
+[M::mm_idx_gen::66.767*1.75] collected minimizers
+[M::mm_idx_gen::69.895*2.55] sorted minimizers
+[M::main::69.895*2.55] loaded/built the index for 25 target sequence(s)
+[M::mm_mapopt_update::76.487*2.41] mid_occ = 177
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 25
+[M::mm_idx_stat::81.723*2.32] distinct minimizers: 215125355 (92.06% are singletons); average occurrences: 1.455; average spacing: 9.958; total length: 3117292070
+[M::worker_pipeline::1090.840*1.87] mapped 3 sequences
+[M::worker_pipeline::1589.567*2.08] mapped 3 sequences
+[M::worker_pipeline::1952.623*2.34] mapped 4 sequences
+[M::worker_pipeline::2401.917*2.66] mapped 5 sequences
+[M::worker_pipeline::3033.021*2.86] mapped 8 sequences
+[M::main] Version: 2.30-r1299-dirty
+[M::main] CMD: /home/nancy/minimap2/minimap2.v2_instr -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz
+[M::main] Real time: 3034.484 sec; CPU: 8673.669 sec; Peak RSS: 29.985 GB
+
+=== [lchain hugetlb pool stats] ===
+  Region size:               4194304 bytes (4.0 MiB)
+  mg_lchain_rmq calls:       46
+  Hugetlb init failures:     0
+  Allocations:
+    From hugetlb region:     2884666
+    From fallback (kalloc):  1522206
+    From freelist (reuse):   4475321686
+    Total:                   4479728558
+  Distribution:
+    Hugetlb hit rate:        0.06%
+    Fallback rate:           0.03%
+    Freelist reuse rate:     99.90%
+  Max cursor observed:       4194304 / 4194304 bytes (100.0%)
+  Region-full calls:         36 (78.26% of calls)
+====================================

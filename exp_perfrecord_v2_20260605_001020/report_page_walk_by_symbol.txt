@@ -1,0 +1,651 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 662K of event 'l2d_tlb_refill'
+# Event count (approx.): 14389438027
+#
+# Children      Self  Symbol                                           IPC   [IPC Coverage]
+# ........  ........  ...............................................  ....................
+#
+    98.87%     0.00%  [.] start_thread                                 -      -            
+            |          
+             --98.87%--start_thread
+                       |          
+                       |--96.88%--ktf_worker
+                       |          |          
+                       |           --96.83%--worker_for
+                       |                     mm_map_frag_core
+                       |                     |          
+                       |                     |--73.14%--chain_post (inlined)
+                       |                     |          |          
+                       |                     |           --73.13%--mm_set_parent
+                       |                     |          
+                       |                     |--9.60%--mg_lchain_rmq
+                       |                     |          |          
+                       |                     |           --9.38%--mg_chain_backtrack
+                       |                     |                     |          
+                       |                     |                      --6.72%--mg_chain_bk_end
+                       |                     |          
+                       |                     |--7.25%--collect_seed_hits
+                       |                     |          |          
+                       |                     |           --5.35%--mm_collect_matches
+                       |                     |                     |          
+                       |                     |                      --5.29%--mm_seed_collect_all
+                       |                     |                                |          
+                       |                     |                                 --5.18%--mm_idx_get
+                       |                     |                                           |          
+                       |                     |                                            --4.46%--kh_get_idx (inlined)
+                       |                     |          
+                       |                     |--4.75%--align_regs (inlined)
+                       |                     |          align_regs (inlined)
+                       |                     |          mm_align_skeleton
+                       |                     |          |          
+                       |                     |           --4.72%--mm_align1
+                       |                     |                     |          
+                       |                     |                     |--2.23%--mm_align_pair
+                       |                     |                     |          |          
+                       |                     |                     |           --2.23%--ksw_extd2_sse
+                       |                     |                     |                     |          
+                       |                     |                     |                     |--0.65%--_mm_sub_epi8 (inlined)
+                       |                     |                     |                     |          vsubq_s8 (inlined)
+                       |                     |                     |                     |          
+                       |                     |                     |                     |--0.55%--ksw_backtrack (inlined)
+                       |                     |                     |                     |          
+                       |                     |                     |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                       |                     |                     |                                vcgtq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--1.02%--mm_filter_bad_seeds (inlined)
+                       |                     |                     |          |          
+                       |                     |                     |           --1.00%--collect_long_gaps
+                       |                     |                     |          
+                       |                     |                      --0.98%--mm_filter_bad_seeds_alt (inlined)
+                       |                     |                                |          
+                       |                     |                                 --0.98%--collect_long_gaps
+                       |                     |          
+                       |                      --1.76%--compact_a
+                       |          
+                        --1.99%--ktp_worker
+                                  |          
+                                   --1.96%--worker_pipeline
+                                             |          
+                                              --1.88%--mm_idx_add
+
+    97.08%     0.00%  [.] thread_start                                 -      -            
+            |
+            ---start_thread
+               |          
+                --96.75%--ktf_worker
+                          |          
+                           --96.69%--worker_for
+                                     mm_map_frag_core
+                                     |          
+                                     |--73.14%--chain_post (inlined)
+                                     |          |          
+                                     |           --73.13%--mm_set_parent
+                                     |          
+                                     |--9.60%--mg_lchain_rmq
+                                     |          |          
+                                     |           --9.38%--mg_chain_backtrack
+                                     |                     |          
+                                     |                      --6.72%--mg_chain_bk_end
+                                     |          
+                                     |--7.15%--collect_seed_hits
+                                     |          |          
+                                     |           --5.35%--mm_collect_matches
+                                     |                     |          
+                                     |                      --5.29%--mm_seed_collect_all
+                                     |                                |          
+                                     |                                 --5.18%--mm_idx_get
+                                     |                                           |          
+                                     |                                            --4.46%--kh_get_idx (inlined)
+                                     |          
+                                     |--4.75%--align_regs (inlined)
+                                     |          align_regs (inlined)
+                                     |          mm_align_skeleton
+                                     |          |          
+                                     |           --4.72%--mm_align1
+                                     |                     |          
+                                     |                     |--2.23%--mm_align_pair
+                                     |                     |          |          
+                                     |                     |           --2.23%--ksw_extd2_sse
+                                     |                     |                     |          
+                                     |                     |                     |--0.65%--_mm_sub_epi8 (inlined)
+                                     |                     |                     |          vsubq_s8 (inlined)
+                                     |                     |                     |          
+                                     |                     |                     |--0.55%--ksw_backtrack (inlined)
+                                     |                     |                     |          
+                                     |                     |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                                     |                     |                                vcgtq_s8 (inlined)
+                                     |                     |          
+                                     |                     |--1.02%--mm_filter_bad_seeds (inlined)
+                                     |                     |          |          
+                                     |                     |           --1.00%--collect_long_gaps
+                                     |                     |          
+                                     |                      --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                     |                                |          
+                                     |                                 --0.98%--collect_long_gaps
+                                     |          
+                                      --1.76%--compact_a
+
+    96.90%     0.00%  [.] worker_for                                   -      -            
+            |
+            ---mm_map_frag_core
+               |          
+               |--73.14%--chain_post (inlined)
+               |          |          
+               |           --73.13%--mm_set_parent
+               |          
+               |--9.66%--mg_lchain_rmq
+               |          |          
+               |           --9.44%--mg_chain_backtrack
+               |                     |          
+               |                      --6.72%--mg_chain_bk_end
+               |          
+               |--7.25%--collect_seed_hits
+               |          |          
+               |           --5.35%--mm_collect_matches
+               |                     |          
+               |                      --5.29%--mm_seed_collect_all
+               |                                |          
+               |                                 --5.18%--mm_idx_get
+               |                                           |          
+               |                                            --4.46%--kh_get_idx (inlined)
+               |          
+               |--4.75%--align_regs (inlined)
+               |          align_regs (inlined)
+               |          mm_align_skeleton
+               |          |          
+               |           --4.72%--mm_align1
+               |                     |          
+               |                     |--2.23%--mm_align_pair
+               |                     |          |          
+               |                     |           --2.23%--ksw_extd2_sse
+               |                     |                     |          
+               |                     |                     |--0.65%--_mm_sub_epi8 (inlined)
+               |                     |                     |          vsubq_s8 (inlined)
+               |                     |                     |          
+               |                     |                     |--0.55%--ksw_backtrack (inlined)
+               |                     |                     |          
+               |                     |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+               |                     |                                vcgtq_s8 (inlined)
+               |                     |          
+               |                     |--1.02%--mm_filter_bad_seeds (inlined)
+               |                     |          |          
+               |                     |           --1.00%--collect_long_gaps
+               |                     |          
+               |                      --0.98%--mm_filter_bad_seeds_alt (inlined)
+               |                                |          
+               |                                 --0.98%--collect_long_gaps
+               |          
+                --1.76%--compact_a
+
+    96.90%     0.01%  [.] mm_map_frag_core                             -      -            
+            |          
+             --96.90%--mm_map_frag_core
+                       |          
+                       |--73.14%--chain_post (inlined)
+                       |          |          
+                       |           --73.13%--mm_set_parent
+                       |          
+                       |--9.66%--mg_lchain_rmq
+                       |          |          
+                       |           --9.44%--mg_chain_backtrack
+                       |                     |          
+                       |                      --6.72%--mg_chain_bk_end
+                       |          
+                       |--7.25%--collect_seed_hits
+                       |          |          
+                       |           --5.35%--mm_collect_matches
+                       |                     |          
+                       |                      --5.29%--mm_seed_collect_all
+                       |                                |          
+                       |                                 --5.18%--mm_idx_get
+                       |                                           |          
+                       |                                            --4.46%--kh_get_idx (inlined)
+                       |          
+                       |--4.75%--align_regs (inlined)
+                       |          align_regs (inlined)
+                       |          mm_align_skeleton
+                       |          |          
+                       |           --4.72%--mm_align1
+                       |                     |          
+                       |                     |--2.23%--mm_align_pair
+                       |                     |          |          
+                       |                     |           --2.23%--ksw_extd2_sse
+                       |                     |                     |          
+                       |                     |                     |--0.65%--_mm_sub_epi8 (inlined)
+                       |                     |                     |          vsubq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--0.55%--ksw_backtrack (inlined)
+                       |                     |                     |          
+                       |                     |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                       |                     |                                vcgtq_s8 (inlined)
+                       |                     |          
+                       |                     |--1.02%--mm_filter_bad_seeds (inlined)
+                       |                     |          |          
+                       |                     |           --1.00%--collect_long_gaps
+                       |                     |          
+                       |                      --0.98%--mm_filter_bad_seeds_alt (inlined)
+                       |                                |          
+                       |                                 --0.98%--collect_long_gaps
+                       |          
+                        --1.76%--compact_a
+
+    96.90%     0.00%  [.] ktf_worker                                   -      -            
+            |          
+             --96.90%--ktf_worker
+                       |          
+                        --96.84%--worker_for
+                                  mm_map_frag_core
+                                  |          
+                                  |--73.14%--chain_post (inlined)
+                                  |          |          
+                                  |           --73.13%--mm_set_parent
+                                  |          
+                                  |--9.60%--mg_lchain_rmq
+                                  |          |          
+                                  |           --9.38%--mg_chain_backtrack
+                                  |                     |          
+                                  |                      --6.72%--mg_chain_bk_end
+                                  |          
+                                  |--7.25%--collect_seed_hits
+                                  |          |          
+                                  |           --5.35%--mm_collect_matches
+                                  |                     |          
+                                  |                      --5.29%--mm_seed_collect_all
+                                  |                                |          
+                                  |                                 --5.18%--mm_idx_get
+                                  |                                           |          
+                                  |                                            --4.46%--kh_get_idx (inlined)
+                                  |          
+                                  |--4.75%--align_regs (inlined)
+                                  |          align_regs (inlined)
+                                  |          mm_align_skeleton
+                                  |          |          
+                                  |           --4.72%--mm_align1
+                                  |                     |          
+                                  |                     |--2.23%--mm_align_pair
+                                  |                     |          |          
+                                  |                     |           --2.23%--ksw_extd2_sse
+                                  |                     |                     |          
+                                  |                     |                     |--0.65%--_mm_sub_epi8 (inlined)
+                                  |                     |                     |          vsubq_s8 (inlined)
+                                  |                     |                     |          
+                                  |                     |                     |--0.55%--ksw_backtrack (inlined)
+                                  |                     |                     |          
+                                  |                     |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                                  |                     |                                vcgtq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--1.02%--mm_filter_bad_seeds (inlined)
+                                  |                     |          |          
+                                  |                     |           --1.00%--collect_long_gaps
+                                  |                     |          
+                                  |                      --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                  |                                |          
+                                  |                                 --0.98%--collect_long_gaps
+                                  |          
+                                   --1.76%--compact_a
+
+    73.14%     0.00%  [.] chain_post (inlined)                         -      -            
+            |          
+             --73.13%--mm_set_parent
+
+    73.13%    73.12%  [.] mm_set_parent                                -      -            
+            |          
+             --73.12%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       chain_post (inlined)
+                       mm_set_parent
+
+     9.65%     0.07%  [.] mg_lchain_rmq                                -      -            
+            |          
+             --9.58%--mg_lchain_rmq
+                       |          
+                        --9.44%--mg_chain_backtrack
+                                  |          
+                                   --6.72%--mg_chain_bk_end
+
+     9.44%     2.60%  [.] mg_chain_backtrack                           -      -            
+            |          
+            |--6.84%--mg_chain_backtrack
+            |          |          
+            |           --6.72%--mg_chain_bk_end
+            |          
+             --2.60%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+
+     7.25%     1.76%  [.] collect_seed_hits                            -      -            
+            |          
+            |--5.49%--collect_seed_hits
+            |          |          
+            |           --5.35%--mm_collect_matches
+            |                     |          
+            |                      --5.29%--mm_seed_collect_all
+            |                                |          
+            |                                 --5.18%--mm_idx_get
+            |                                           |          
+            |                                            --4.46%--kh_get_idx (inlined)
+            |          
+             --1.76%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+
+     6.72%     6.72%  [.] mg_chain_bk_end                              -      -            
+            |          
+             --6.72%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+                       mg_chain_bk_end
+
+     5.18%     5.18%  [.] mm_idx_get                                   -      -            
+            |          
+             --5.18%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+                       mm_collect_matches
+                       mm_seed_collect_all
+                       mm_idx_get
+                       |          
+                        --4.46%--kh_get_idx (inlined)
+
+     4.75%     0.02%  [.] mm_align_skeleton                            -      -            
+            |          
+             --4.73%--mm_align_skeleton
+                       |          
+                        --4.72%--mm_align1
+                                  |          
+                                  |--2.23%--mm_align_pair
+                                  |          |          
+                                  |           --2.23%--ksw_extd2_sse
+                                  |                     |          
+                                  |                     |--0.65%--_mm_sub_epi8 (inlined)
+                                  |                     |          vsubq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.55%--ksw_backtrack (inlined)
+                                  |                     |          
+                                  |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                                  |                                vcgtq_s8 (inlined)
+                                  |          
+                                  |--1.02%--mm_filter_bad_seeds (inlined)
+                                  |          |          
+                                  |           --1.00%--collect_long_gaps
+                                  |          
+                                   --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                             |          
+                                              --0.98%--collect_long_gaps
+
+     4.75%     0.00%  [.] align_regs (inlined)                         -      -            
+            |
+            ---align_regs (inlined)
+               mm_align_skeleton
+               |          
+                --4.72%--mm_align1
+                          |          
+                          |--2.23%--mm_align_pair
+                          |          |          
+                          |           --2.23%--ksw_extd2_sse
+                          |                     |          
+                          |                     |--0.65%--_mm_sub_epi8 (inlined)
+                          |                     |          vsubq_s8 (inlined)
+                          |                     |          
+                          |                     |--0.55%--ksw_backtrack (inlined)
+                          |                     |          
+                          |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                          |                                vcgtq_s8 (inlined)
+                          |          
+                          |--1.02%--mm_filter_bad_seeds (inlined)
+                          |          |          
+                          |           --1.00%--collect_long_gaps
+                          |          
+                           --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                     |          
+                                      --0.98%--collect_long_gaps
+
+     4.75%     0.00%  [.] align_regs (inlined)                         -      -            
+            |
+            ---mm_align_skeleton
+               |          
+                --4.72%--mm_align1
+                          |          
+                          |--2.23%--mm_align_pair
+                          |          |          
+                          |           --2.23%--ksw_extd2_sse
+                          |                     |          
+                          |                     |--0.65%--_mm_sub_epi8 (inlined)
+                          |                     |          vsubq_s8 (inlined)
+                          |                     |          
+                          |                     |--0.55%--ksw_backtrack (inlined)
+                          |                     |          
+                          |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                          |                                vcgtq_s8 (inlined)
+                          |          
+                          |--1.02%--mm_filter_bad_seeds (inlined)
+                          |          |          
+                          |           --1.00%--collect_long_gaps
+                          |          
+                           --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                     |          
+                                      --0.98%--collect_long_gaps
+
+     4.72%     0.05%  [.] mm_align1                                    -      -            
+            |          
+             --4.66%--mm_align1
+                       |          
+                       |--2.23%--mm_align_pair
+                       |          |          
+                       |           --2.23%--ksw_extd2_sse
+                       |                     |          
+                       |                     |--0.65%--_mm_sub_epi8 (inlined)
+                       |                     |          vsubq_s8 (inlined)
+                       |                     |          
+                       |                     |--0.55%--ksw_backtrack (inlined)
+                       |                     |          
+                       |                      --0.55%--_mm_cmpgt_epi8 (inlined)
+                       |                                vcgtq_s8 (inlined)
+                       |          
+                       |--1.00%--mm_filter_bad_seeds (inlined)
+                       |          |          
+                       |           --1.00%--collect_long_gaps
+                       |          
+                        --0.98%--mm_filter_bad_seeds_alt (inlined)
+                                  |          
+                                   --0.98%--collect_long_gaps
+
+     4.46%     0.00%  [.] kh_get_idx (inlined)                         -      -            
+     4.08%     0.03%  [.] mm_collect_matches                           -      -            
+            |          
+             --4.05%--mm_collect_matches
+                       |          
+                        --4.03%--mm_seed_collect_all
+                                  |          
+                                   --3.96%--mm_idx_get
+                                             |          
+                                              --3.41%--kh_get_idx (inlined)
+
+     4.03%     0.05%  [.] mm_seed_collect_all                          -      -            
+            |          
+             --3.99%--mm_seed_collect_all
+                       |          
+                        --3.96%--mm_idx_get
+                                  |          
+                                   --3.41%--kh_get_idx (inlined)
+
+     2.23%     0.00%  [.] mm_align_pair                                -      -            
+            |          
+             --2.23%--mm_align_pair
+                       |          
+                        --2.23%--ksw_extd2_sse
+                                  |          
+                                  |--0.65%--_mm_sub_epi8 (inlined)
+                                  |          vsubq_s8 (inlined)
+                                  |          
+                                  |--0.55%--ksw_backtrack (inlined)
+                                  |          
+                                   --0.55%--_mm_cmpgt_epi8 (inlined)
+                                             vcgtq_s8 (inlined)
+
+     2.23%     1.60%  [.] ksw_extd2_sse                                -      -            
+            |          
+            |--1.60%--thread_start
+            |          start_thread
+            |          ktf_worker
+            |          worker_for
+            |          mm_map_frag_core
+            |          align_regs (inlined)
+            |          align_regs (inlined)
+            |          mm_align_skeleton
+            |          |          
+            |           --1.60%--mm_align1
+            |                     mm_align_pair
+            |                     ksw_extd2_sse
+            |                     |          
+            |                     |--0.64%--_mm_sub_epi8 (inlined)
+            |                     |          vsubq_s8 (inlined)
+            |                     |          
+            |                      --0.54%--_mm_cmpgt_epi8 (inlined)
+            |                                vcgtq_s8 (inlined)
+            |          
+             --0.63%--ksw_extd2_sse
+                       |          
+                        --0.55%--ksw_backtrack (inlined)
+
+     1.99%     0.00%  [.] ktp_worker                                   -      -            
+            |          
+             --1.96%--worker_pipeline
+                       |          
+                        --1.88%--mm_idx_add
+
+     1.97%     1.97%  [.] collect_long_gaps                            -      -            
+            |          
+             --1.97%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       mm_align1
+                       |          
+                       |--0.99%--mm_filter_bad_seeds (inlined)
+                       |          collect_long_gaps
+                       |          
+                        --0.97%--mm_filter_bad_seeds_alt (inlined)
+                                  collect_long_gaps
+
+     1.96%     0.01%  [.] worker_pipeline                              -      -            
+            |          
+             --1.95%--worker_pipeline
+                       |          
+                        --1.88%--mm_idx_add
+
+     1.88%     1.76%  [.] mm_idx_add                                   -      -            
+            |          
+             --1.76%--thread_start
+                       start_thread
+                       ktp_worker
+                       worker_pipeline
+                       mm_idx_add
+
+     1.76%     1.30%  [.] compact_a                                    -      -            
+            |          
+             --1.30%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       compact_a
+
+     1.65%     0.00%  [.] thread_start                                 -      -            
+            |
+            ---start_thread
+               ktp_worker
+               |          
+                --1.65%--worker_pipeline
+                          |          
+                           --1.58%--mm_idx_add
+
+     1.27%     0.01%  [.] mm_collect_matches                           -      -            
+            |          
+             --1.26%--mm_collect_matches
+                       |          
+                        --1.26%--mm_seed_collect_all
+                                  |          
+                                   --1.23%--mm_idx_get
+                                             |          
+                                              --1.05%--kh_get_idx (inlined)
+
+     1.26%     0.02%  [.] mm_seed_collect_all                          -      -            
+            |          
+             --1.24%--mm_seed_collect_all
+                       |          
+                        --1.23%--mm_idx_get
+                                  |          
+                                   --1.05%--kh_get_idx (inlined)
+
+     1.23%     1.22%  [.] rs_sort_128x                                 -      -            
+            |          
+             --1.01%--rs_sort_128x
+                       |          
+                        --1.01%--rs_sort_128x
+
+     1.02%     0.00%  [.] mm_filter_bad_seeds (inlined)                -      -            
+            |          
+             --1.00%--collect_long_gaps
+
+     0.98%     0.00%  [.] mm_filter_bad_seeds_alt (inlined)            -      -            
+            |          
+             --0.98%--collect_long_gaps
+
+     0.65%     0.00%  [.] _mm_sub_epi8 (inlined)                       -      -            
+            |
+            ---vsubq_s8 (inlined)
+
+     0.65%     0.00%  [.] vsubq_s8 (inlined)                           -      -            
+     0.55%     0.00%  [.] ksw_backtrack (inlined)                      -      -            
+     0.55%     0.55%  [.] ksw_backtrack.constprop.0                    -      -            
+            |
+            ---start_thread
+               ktf_worker
+               worker_for
+               mm_map_frag_core
+               align_regs (inlined)
+               align_regs (inlined)
+               mm_align_skeleton
+               |          
+                --0.55%--mm_align1
+                          mm_align_pair
+                          ksw_extd2_sse
+                          ksw_backtrack (inlined)
+
+     0.55%     0.00%  [.] _mm_cmpgt_epi8 (inlined)                     -      -            
+            |
+            ---vcgtq_s8 (inlined)
+
+     0.55%     0.00%  [.] vcgtq_s8 (inlined)                           -      -            
+     0.54%     0.51%  [.] __memcpy_generic                             -      -            
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

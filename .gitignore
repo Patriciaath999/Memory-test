@@ -2,3 +2,16 @@
 *.data
 *.bam
 *.gz
+*.bin
+*.data
+*.paf
+*.bam
+setparent_dumps/
+nohup*.log
+*.bin
+*.data
+*.paf
+*.bam
+setparent_dumps/
+nohup*.log
+lchain_dump*

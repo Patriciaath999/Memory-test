@@ -1,0 +1,20 @@
+=== mm_set_parent SoA/Interleaved ablation ===
+Dump: setparent_000034_n590603.bin (n=590603, k_max=3, avg_k=2.1)
+Date: 2026-06-20
+
+baseline:
+  cycles=1,043,334,974  instructions=1,127,849,931  IPC=1.08
+  l1d_refill=34,321,886  l2d_refill=35,774,811  l2d_tlb=581,987
+  wall=31.27ms
+
+V2 SoA (qs_pri[]/qe_pri[] separate arrays):
+  cycles=1,043,165,189  instructions=1,128,009,477  IPC=1.08
+  l1d_refill=34,465,289  l2d_refill=35,888,284  l2d_tlb=585,028
+  wall=31.38ms
+  → no improvement (extra footprint offsets benefit)
+
+V1 interleaved (qse_pri[] packed qs/qe, lazy cold access):
+  cycles=1,020,117,764 (-2.2%)  instructions=1,086,876,294 (-3.6%)  IPC=1.07
+  l1d_refill=34,353,116 (flat)  l2d_refill=15,810,309 (-55.8%!)  l2d_tlb=585,218 (flat)
+  wall=30.64ms (-2.0%)
+  → confirmed improvement, mainly L2d cache refill reduction

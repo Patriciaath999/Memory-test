@@ -1,0 +1,14 @@
+[M::mm_idx_gen::66.752*1.75] collected minimizers
+[M::mm_idx_gen::69.994*2.52] sorted minimizers
+[M::main::69.994*2.52] loaded/built the index for 25 target sequence(s)
+[M::mm_mapopt_update::76.588*2.39] mid_occ = 177
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 25
+[M::mm_idx_stat::81.821*2.30] distinct minimizers: 215125355 (92.06% are singletons); average occurrences: 1.455; average spacing: 9.958; total length: 3117292070
+[M::worker_pipeline::1090.892*1.86] mapped 3 sequences
+[M::worker_pipeline::1587.441*2.08] mapped 3 sequences
+[M::worker_pipeline::1948.835*2.34] mapped 4 sequences
+[M::worker_pipeline::2393.927*2.66] mapped 5 sequences
+[M::worker_pipeline::3027.439*2.86] mapped 8 sequences
+[M::main] Version: 2.30-r1299-dirty
+[M::main] CMD: /home/nancy/minimap2/minimap2.v8_4mb -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz
+[M::main] Real time: 3028.926 sec; CPU: 8664.789 sec; Peak RSS: 29.967 GB

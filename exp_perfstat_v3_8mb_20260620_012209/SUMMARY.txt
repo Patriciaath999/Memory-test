@@ -1,0 +1,25 @@
+perf-stat Summary: TAG=v3_8mb MM2_BIN=/home/nancy/minimap2/minimap2.v3_8mb
+Completed at Sat Jun 20 01:22:14 AM CST 2026
+PERF_EVENTS=cycles,instructions,stall_backend,l1d_cache_refill,l2d_cache_refill,l2d_tlb_refill
+## Counter coverage check:
+--- Counter coverage check for run1 ---
+
+--- run1 ---
+# started on Sat Jun 20 01:22:14 2026
+
+## Files:
+total 52K
+-rw-rw-r-- 1 nancy nancy  133 Jun 20 01:22 experiment.log
+-rw-rw-r-- 1 nancy nancy  297 Jun 20 01:22 meminfo_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  297 Jun 20 01:22 meminfo_before_run1.txt
+-rw-rw-r-- 1 nancy nancy   43 Jun 20 01:22 minimap2_stderr_run1.txt
+-rw-rw-r-- 1 nancy nancy   41 Jun 20 01:22 multiplex_check.log
+-rw-rw-r-- 1 nancy nancy    0 Jun 20 01:22 output_run1.paf
+-rw-rw-r-- 1 nancy nancy   39 Jun 20 01:22 perf_stat_run1.txt
+-rw-rw-r-- 1 nancy nancy  345 Jun 20 01:22 SUMMARY.txt
+-rw-rw-r-- 1 nancy nancy  537 Jun 20 01:22 system_info.txt
+-rw-rw-r-- 1 nancy nancy   23 Jun 20 01:22 thp_setting.txt
+-rw-rw-r-- 1 nancy nancy 1.1K Jun 20 01:22 time_run1.txt
+-rw-rw-r-- 1 nancy nancy  783 Jun 20 01:22 vmstat_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  783 Jun 20 01:22 vmstat_before_run1.txt
+-rw-rw-r-- 1 nancy nancy   90 Jun 20 01:22 vmstat_diff_run1.txt

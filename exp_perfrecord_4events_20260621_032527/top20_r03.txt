@@ -1,0 +1,21 @@
+=== Top 20 for r03 ===
+    93.56%     0.00%  [.] start_thread                            -      -            
+    93.02%     0.00%  [.] thread_start                            -      -            
+    92.08%     0.00%  [.] ktf_worker                              -      -            
+    91.81%     0.03%  [.] mm_map_frag_core                        -      -            
+    83.18%     0.00%  [.] worker_for                              -      -            
+    42.91%     8.60%  [.] mg_lchain_rmq                           -      -            
+    42.40%     0.00%  [.] align_regs (inlined)                    -      -            
+    42.40%     0.00%  [.] align_regs (inlined)                    -      -            
+    42.40%     0.07%  [.] mm_align_skeleton                       -      -            
+    42.23%     0.38%  [.] mm_align1                               -      -            
+    27.27%     0.02%  [.] mm_align_pair                           -      -            
+    27.20%    25.62%  [.] ksw_extd2_sse                           -      -            
+    10.67%     0.00%  [.] _mm_or_si128 (inlined)                  -      -            
+    10.67%     0.00%  [.] vorrq_s32 (inlined)                     -      -            
+     9.19%     9.19%  [.] collect_long_gaps                       -      -            
+     8.63%     0.00%  [.] worker_for                              -      -            
+     8.07%     8.02%  [.] krmq_insert_lc_elem                     -      -            
+     7.90%     7.90%  [.] krmq_rmq_lc_elem                        -      -            
+     6.99%     6.84%  [.] rs_sort_128x                            -      -            
+     6.64%     6.61%  [.] krmq_erase_lc_elem                      -      -            

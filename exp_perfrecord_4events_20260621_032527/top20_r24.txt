@@ -1,0 +1,21 @@
+=== Top 20 for r24 ===
+    92.01%     0.00%  [.] start_thread                           -      -            
+    91.17%     0.00%  [.] worker_for                             -      -            
+    91.17%     0.02%  [.] mm_map_frag_core                       -      -            
+    91.07%     0.00%  [.] ktf_worker                             -      -            
+    91.00%     0.00%  [.] thread_start                           -      -            
+    60.14%     0.00%  [.] align_regs (inlined)                   -      -            
+    60.14%     0.00%  [.] align_regs (inlined)                   -      -            
+    60.14%     0.04%  [.] mm_align_skeleton                      -      -            
+    60.06%     0.11%  [.] mm_align1                              -      -            
+    51.72%     0.00%  [.] mm_align_pair                          -      -            
+    47.86%    47.55%  [.] ksw_extd2_sse                          -      -            
+    25.87%     3.93%  [.] mg_lchain_rmq                          -      -            
+    17.87%     0.00%  [.] _mm_or_si128 (inlined)                 -      -            
+    17.87%     0.00%  [.] vorrq_s32 (inlined)                    -      -            
+     8.81%     8.64%  [.] rs_sort_128x                           -      -            
+     8.79%     0.00%  [.] _mm_sub_epi8 (inlined)                 -      -            
+     8.79%     0.00%  [.] vsubq_s8 (inlined)                     -      -            
+     8.50%     0.00%  [.] _mm_cmpgt_epi8 (inlined)               -      -            
+     8.50%     0.00%  [.] vcgtq_s8 (inlined)                     -      -            
+     6.26%     6.20%  [.] krmq_erase_lc_elem                     -      -            

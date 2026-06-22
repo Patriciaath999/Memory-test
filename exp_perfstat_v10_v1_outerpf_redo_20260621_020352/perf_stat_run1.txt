@@ -1,0 +1,18 @@
+# started on Sun Jun 21 02:03:58 2026
+
+
+ Performance counter stats for '/home/nancy/minimap2/minimap2.v10_v1_outerpf -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+22,180,548,944,252      cycles                                                                
+20,205,986,046,939      instructions                     #    0.91  insn per cycle            
+ 5,872,980,560,898      stall_backend                                                         
+   220,638,585,784      l1d_cache_refill                                                      
+    97,745,762,800      l2d_cache_refill                                                      
+     3,963,942,399      l2d_tlb_refill                                                        
+
+    3070.071722282 seconds time elapsed
+
+    8768.384048000 seconds user
+     102.550774000 seconds sys
+
+

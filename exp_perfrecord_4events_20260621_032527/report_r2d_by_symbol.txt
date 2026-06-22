@@ -1,0 +1,1220 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 644K of event 'r2d'
+# Event count (approx.): 3855794419
+#
+# Children      Self  Symbol                                              IPC   [IPC Coverage]
+# ........  ........  ..................................................  ....................
+#
+    95.79%     0.00%  [.] start_thread                                    -      -            
+            |          
+             --95.79%--start_thread
+                       |          
+                       |--88.39%--ktf_worker
+                       |          |          
+                       |           --88.19%--worker_for
+                       |                     |          
+                       |                      --88.19%--mm_map_frag_core
+                       |                                |          
+                       |                                |--35.71%--mg_lchain_rmq
+                       |                                |          |          
+                       |                                |           --34.93%--mg_chain_backtrack
+                       |                                |                     |          
+                       |                                |                      --25.18%--mg_chain_bk_end
+                       |                                |          
+                       |                                |--26.98%--collect_seed_hits
+                       |                                |          |          
+                       |                                |           --19.87%--mm_collect_matches
+                       |                                |                     |          
+                       |                                |                      --19.67%--mm_seed_collect_all
+                       |                                |                                |          
+                       |                                |                                 --19.26%--mm_idx_get
+                       |                                |                                           |          
+                       |                                |                                            --16.60%--kh_get_idx (inlined)
+                       |                                |          
+                       |                                |--17.67%--align_regs (inlined)
+                       |                                |          align_regs (inlined)
+                       |                                |          mm_align_skeleton
+                       |                                |          |          
+                       |                                |           --17.55%--mm_align1
+                       |                                |                     |          
+                       |                                |                     |--8.27%--mm_align_pair
+                       |                                |                     |          |          
+                       |                                |                     |           --8.27%--ksw_extd2_sse
+                       |                                |                     |                     |          
+                       |                                |                     |                     |--2.22%--_mm_sub_epi8 (inlined)
+                       |                                |                     |                     |          vsubq_s8 (inlined)
+                       |                                |                     |                     |          
+                       |                                |                     |                     |--2.05%--ksw_backtrack (inlined)
+                       |                                |                     |                     |          
+                       |                                |                     |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                       |                                |                     |                     |          vcgtq_s8 (inlined)
+                       |                                |                     |                     |          
+                       |                                |                     |                     |--0.97%--_mm_and_si128 (inlined)
+                       |                                |                     |                     |          vandq_s32 (inlined)
+                       |                                |                     |                     |          
+                       |                                |                     |                      --0.69%--_mm_or_si128 (inlined)
+                       |                                |                     |                                vorrq_s32 (inlined)
+                       |                                |                     |          
+                       |                                |                     |--3.81%--mm_filter_bad_seeds (inlined)
+                       |                                |                     |          |          
+                       |                                |                     |           --3.69%--collect_long_gaps
+                       |                                |                     |          
+                       |                                |                     |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                       |                                |                     |          |          
+                       |                                |                     |           --3.65%--collect_long_gaps
+                       |                                |                     |          
+                       |                                |                      --1.61%--mm_split_reg
+                       |                                |                                |          
+                       |                                |                                 --1.61%--mm_reg_set_coor (inlined)
+                       |                                |                                           |          
+                       |                                |                                            --1.61%--mm_cal_fuzzy_len (inlined)
+                       |                                |          
+                       |                                |--6.57%--compact_a
+                       |                                |          |          
+                       |                                |           --1.70%--memcpy (inlined)
+                       |                                |                     |          
+                       |                                |                      --1.69%--__memcpy_generic
+                       |                                |          
+                       |                                 --0.68%--mm_gen_regs
+                       |                                           |          
+                       |                                            --0.62%--mm_reg_set_coor (inlined)
+                       |          
+                        --7.40%--ktp_worker
+                                  |          
+                                   --7.28%--worker_pipeline
+                                             |          
+                                              --7.00%--mm_idx_add
+
+    95.28%     0.00%  [.] thread_start                                    -      -            
+            |
+            ---start_thread
+               |          
+               |--87.88%--ktf_worker
+               |          |          
+               |           --87.67%--worker_for
+               |                     |          
+               |                      --87.67%--mm_map_frag_core
+               |                                |          
+               |                                |--35.71%--mg_lchain_rmq
+               |                                |          |          
+               |                                |           --34.93%--mg_chain_backtrack
+               |                                |                     |          
+               |                                |                      --25.18%--mg_chain_bk_end
+               |                                |          
+               |                                |--26.63%--collect_seed_hits
+               |                                |          |          
+               |                                |           --19.87%--mm_collect_matches
+               |                                |                     |          
+               |                                |                      --19.67%--mm_seed_collect_all
+               |                                |                                |          
+               |                                |                                 --19.26%--mm_idx_get
+               |                                |                                           |          
+               |                                |                                            --16.60%--kh_get_idx (inlined)
+               |                                |          
+               |                                |--17.67%--align_regs (inlined)
+               |                                |          align_regs (inlined)
+               |                                |          mm_align_skeleton
+               |                                |          |          
+               |                                |           --17.55%--mm_align1
+               |                                |                     |          
+               |                                |                     |--8.27%--mm_align_pair
+               |                                |                     |          |          
+               |                                |                     |           --8.27%--ksw_extd2_sse
+               |                                |                     |                     |          
+               |                                |                     |                     |--2.22%--_mm_sub_epi8 (inlined)
+               |                                |                     |                     |          vsubq_s8 (inlined)
+               |                                |                     |                     |          
+               |                                |                     |                     |--2.05%--ksw_backtrack (inlined)
+               |                                |                     |                     |          
+               |                                |                     |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+               |                                |                     |                     |          vcgtq_s8 (inlined)
+               |                                |                     |                     |          
+               |                                |                     |                     |--0.97%--_mm_and_si128 (inlined)
+               |                                |                     |                     |          vandq_s32 (inlined)
+               |                                |                     |                     |          
+               |                                |                     |                      --0.69%--_mm_or_si128 (inlined)
+               |                                |                     |                                vorrq_s32 (inlined)
+               |                                |                     |          
+               |                                |                     |--3.81%--mm_filter_bad_seeds (inlined)
+               |                                |                     |          |          
+               |                                |                     |           --3.69%--collect_long_gaps
+               |                                |                     |          
+               |                                |                     |--3.69%--mm_filter_bad_seeds_alt (inlined)
+               |                                |                     |          |          
+               |                                |                     |           --3.65%--collect_long_gaps
+               |                                |                     |          
+               |                                |                      --1.61%--mm_split_reg
+               |                                |                                |          
+               |                                |                                 --1.61%--mm_reg_set_coor (inlined)
+               |                                |                                           |          
+               |                                |                                            --1.61%--mm_cal_fuzzy_len (inlined)
+               |                                |          
+               |                                |--6.56%--compact_a
+               |                                |          |          
+               |                                |           --1.70%--memcpy (inlined)
+               |                                |                     |          
+               |                                |                      --1.69%--__memcpy_generic
+               |                                |          
+               |                                 --0.67%--mm_gen_regs
+               |                                           |          
+               |                                            --0.62%--mm_reg_set_coor (inlined)
+               |          
+                --7.40%--ktp_worker
+                          |          
+                           --7.28%--worker_pipeline
+                                     |          
+                                      --7.00%--mm_idx_add
+
+    88.47%     0.00%  [.] worker_for                                      -      -            
+            |          
+             --88.47%--worker_for
+                       mm_map_frag_core
+                       |          
+                       |--35.93%--mg_lchain_rmq
+                       |          |          
+                       |           --35.16%--mg_chain_backtrack
+                       |                     |          
+                       |                      --25.18%--mg_chain_bk_end
+                       |          
+                       |--26.98%--collect_seed_hits
+                       |          |          
+                       |           --19.87%--mm_collect_matches
+                       |                     |          
+                       |                      --19.67%--mm_seed_collect_all
+                       |                                |          
+                       |                                 --19.26%--mm_idx_get
+                       |                                           |          
+                       |                                            --16.60%--kh_get_idx (inlined)
+                       |          
+                       |--17.67%--align_regs (inlined)
+                       |          align_regs (inlined)
+                       |          mm_align_skeleton
+                       |          |          
+                       |           --17.55%--mm_align1
+                       |                     |          
+                       |                     |--8.27%--mm_align_pair
+                       |                     |          |          
+                       |                     |           --8.27%--ksw_extd2_sse
+                       |                     |                     |          
+                       |                     |                     |--2.22%--_mm_sub_epi8 (inlined)
+                       |                     |                     |          vsubq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--2.05%--ksw_backtrack (inlined)
+                       |                     |                     |          
+                       |                     |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                       |                     |                     |          vcgtq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--0.97%--_mm_and_si128 (inlined)
+                       |                     |                     |          vandq_s32 (inlined)
+                       |                     |                     |          
+                       |                     |                      --0.69%--_mm_or_si128 (inlined)
+                       |                     |                                vorrq_s32 (inlined)
+                       |                     |          
+                       |                     |--3.81%--mm_filter_bad_seeds (inlined)
+                       |                     |          |          
+                       |                     |           --3.69%--collect_long_gaps
+                       |                     |          
+                       |                     |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                       |                     |          |          
+                       |                     |           --3.65%--collect_long_gaps
+                       |                     |          
+                       |                      --1.61%--mm_split_reg
+                       |                                |          
+                       |                                 --1.61%--mm_reg_set_coor (inlined)
+                       |                                           |          
+                       |                                            --1.61%--mm_cal_fuzzy_len (inlined)
+                       |          
+                       |--6.57%--compact_a
+                       |          |          
+                       |           --1.70%--memcpy (inlined)
+                       |                     |          
+                       |                      --1.69%--__memcpy_generic
+                       |          
+                        --0.68%--mm_gen_regs
+                                  |          
+                                   --0.62%--mm_reg_set_coor (inlined)
+
+    88.47%     0.03%  [.] mm_map_frag_core                                -      -            
+            |          
+             --88.44%--mm_map_frag_core
+                       |          
+                       |--35.93%--mg_lchain_rmq
+                       |          |          
+                       |           --35.16%--mg_chain_backtrack
+                       |                     |          
+                       |                      --25.18%--mg_chain_bk_end
+                       |          
+                       |--26.98%--collect_seed_hits
+                       |          |          
+                       |           --19.87%--mm_collect_matches
+                       |                     |          
+                       |                      --19.67%--mm_seed_collect_all
+                       |                                |          
+                       |                                 --19.26%--mm_idx_get
+                       |                                           |          
+                       |                                            --16.60%--kh_get_idx (inlined)
+                       |          
+                       |--17.67%--align_regs (inlined)
+                       |          align_regs (inlined)
+                       |          mm_align_skeleton
+                       |          |          
+                       |           --17.55%--mm_align1
+                       |                     |          
+                       |                     |--8.27%--mm_align_pair
+                       |                     |          |          
+                       |                     |           --8.27%--ksw_extd2_sse
+                       |                     |                     |          
+                       |                     |                     |--2.22%--_mm_sub_epi8 (inlined)
+                       |                     |                     |          vsubq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--2.05%--ksw_backtrack (inlined)
+                       |                     |                     |          
+                       |                     |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                       |                     |                     |          vcgtq_s8 (inlined)
+                       |                     |                     |          
+                       |                     |                     |--0.97%--_mm_and_si128 (inlined)
+                       |                     |                     |          vandq_s32 (inlined)
+                       |                     |                     |          
+                       |                     |                      --0.69%--_mm_or_si128 (inlined)
+                       |                     |                                vorrq_s32 (inlined)
+                       |                     |          
+                       |                     |--3.81%--mm_filter_bad_seeds (inlined)
+                       |                     |          |          
+                       |                     |           --3.69%--collect_long_gaps
+                       |                     |          
+                       |                     |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                       |                     |          |          
+                       |                     |           --3.65%--collect_long_gaps
+                       |                     |          
+                       |                      --1.61%--mm_split_reg
+                       |                                |          
+                       |                                 --1.61%--mm_reg_set_coor (inlined)
+                       |                                           |          
+                       |                                            --1.61%--mm_cal_fuzzy_len (inlined)
+                       |          
+                       |--6.57%--compact_a
+                       |          |          
+                       |           --1.70%--memcpy (inlined)
+                       |                     |          
+                       |                      --1.69%--__memcpy_generic
+                       |          
+                        --0.68%--mm_gen_regs
+                                  |          
+                                   --0.62%--mm_reg_set_coor (inlined)
+
+    88.45%     0.00%  [.] ktf_worker                                      -      -            
+            |          
+             --88.45%--ktf_worker
+                       |          
+                        --88.25%--worker_for
+                                  |          
+                                   --88.25%--mm_map_frag_core
+                                             |          
+                                             |--35.71%--mg_lchain_rmq
+                                             |          |          
+                                             |           --34.93%--mg_chain_backtrack
+                                             |                     |          
+                                             |                      --25.18%--mg_chain_bk_end
+                                             |          
+                                             |--26.98%--collect_seed_hits
+                                             |          |          
+                                             |           --19.87%--mm_collect_matches
+                                             |                     |          
+                                             |                      --19.67%--mm_seed_collect_all
+                                             |                                |          
+                                             |                                 --19.26%--mm_idx_get
+                                             |                                           |          
+                                             |                                            --16.60%--kh_get_idx (inlined)
+                                             |          
+                                             |--17.67%--align_regs (inlined)
+                                             |          align_regs (inlined)
+                                             |          mm_align_skeleton
+                                             |          |          
+                                             |           --17.55%--mm_align1
+                                             |                     |          
+                                             |                     |--8.27%--mm_align_pair
+                                             |                     |          |          
+                                             |                     |           --8.27%--ksw_extd2_sse
+                                             |                     |                     |          
+                                             |                     |                     |--2.22%--_mm_sub_epi8 (inlined)
+                                             |                     |                     |          vsubq_s8 (inlined)
+                                             |                     |                     |          
+                                             |                     |                     |--2.05%--ksw_backtrack (inlined)
+                                             |                     |                     |          
+                                             |                     |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                                             |                     |                     |          vcgtq_s8 (inlined)
+                                             |                     |                     |          
+                                             |                     |                     |--0.97%--_mm_and_si128 (inlined)
+                                             |                     |                     |          vandq_s32 (inlined)
+                                             |                     |                     |          
+                                             |                     |                      --0.69%--_mm_or_si128 (inlined)
+                                             |                     |                                vorrq_s32 (inlined)
+                                             |                     |          
+                                             |                     |--3.81%--mm_filter_bad_seeds (inlined)
+                                             |                     |          |          
+                                             |                     |           --3.69%--collect_long_gaps
+                                             |                     |          
+                                             |                     |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                                             |                     |          |          
+                                             |                     |           --3.65%--collect_long_gaps
+                                             |                     |          
+                                             |                      --1.61%--mm_split_reg
+                                             |                                |          
+                                             |                                 --1.61%--mm_reg_set_coor (inlined)
+                                             |                                           |          
+                                             |                                            --1.61%--mm_cal_fuzzy_len (inlined)
+                                             |          
+                                             |--6.57%--compact_a
+                                             |          |          
+                                             |           --1.70%--memcpy (inlined)
+                                             |                     |          
+                                             |                      --1.69%--__memcpy_generic
+                                             |          
+                                              --0.68%--mm_gen_regs
+                                                        |          
+                                                         --0.62%--mm_reg_set_coor (inlined)
+
+    35.93%     0.24%  [.] mg_lchain_rmq                                   -      -            
+            |          
+             --35.69%--mg_lchain_rmq
+                       |          
+                        --35.16%--mg_chain_backtrack
+                                  |          
+                                   --25.18%--mg_chain_bk_end
+
+    35.16%     9.57%  [.] mg_chain_backtrack                              -      -            
+            |          
+            |--25.59%--mg_chain_backtrack
+            |          |          
+            |           --25.18%--mg_chain_bk_end
+            |          
+             --9.57%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+
+    26.98%     6.54%  [.] collect_seed_hits                               -      -            
+            |          
+            |--20.45%--collect_seed_hits
+            |          |          
+            |           --19.87%--mm_collect_matches
+            |                     |          
+            |                      --19.67%--mm_seed_collect_all
+            |                                |          
+            |                                 --19.26%--mm_idx_get
+            |                                           |          
+            |                                            --16.60%--kh_get_idx (inlined)
+            |          
+             --6.54%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+
+    25.18%    25.16%  [.] mg_chain_bk_end                                 -      -            
+            |          
+             --25.16%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mg_lchain_rmq
+                       mg_chain_backtrack
+                       mg_chain_bk_end
+
+    19.87%     0.15%  [.] mm_collect_matches                              -      -            
+            |          
+             --19.72%--mm_collect_matches
+                       |          
+                        --19.67%--mm_seed_collect_all
+                                  |          
+                                   --19.26%--mm_idx_get
+                                             |          
+                                              --16.60%--kh_get_idx (inlined)
+
+    19.67%     0.27%  [.] mm_seed_collect_all                             -      -            
+            |          
+             --19.39%--mm_seed_collect_all
+                       |          
+                        --19.26%--mm_idx_get
+                                  |          
+                                   --16.60%--kh_get_idx (inlined)
+
+    19.26%    19.26%  [.] mm_idx_get                                      -      -            
+            |          
+             --19.26%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       collect_seed_hits
+                       mm_collect_matches
+                       mm_seed_collect_all
+                       mm_idx_get
+                       |          
+                        --16.60%--kh_get_idx (inlined)
+
+    17.67%     0.06%  [.] mm_align_skeleton                               -      -            
+            |          
+             --17.61%--mm_align_skeleton
+                       |          
+                        --17.55%--mm_align1
+                                  |          
+                                  |--8.27%--mm_align_pair
+                                  |          |          
+                                  |           --8.27%--ksw_extd2_sse
+                                  |                     |          
+                                  |                     |--2.22%--_mm_sub_epi8 (inlined)
+                                  |                     |          vsubq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--2.05%--ksw_backtrack (inlined)
+                                  |                     |          
+                                  |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                                  |                     |          vcgtq_s8 (inlined)
+                                  |                     |          
+                                  |                     |--0.97%--_mm_and_si128 (inlined)
+                                  |                     |          vandq_s32 (inlined)
+                                  |                     |          
+                                  |                      --0.69%--_mm_or_si128 (inlined)
+                                  |                                vorrq_s32 (inlined)
+                                  |          
+                                  |--3.81%--mm_filter_bad_seeds (inlined)
+                                  |          |          
+                                  |           --3.69%--collect_long_gaps
+                                  |          
+                                  |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                                  |          |          
+                                  |           --3.65%--collect_long_gaps
+                                  |          
+                                   --1.61%--mm_split_reg
+                                             |          
+                                              --1.61%--mm_reg_set_coor (inlined)
+                                                        |          
+                                                         --1.61%--mm_cal_fuzzy_len (inlined)
+
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+            |
+            ---align_regs (inlined)
+               mm_align_skeleton
+               |          
+                --17.55%--mm_align1
+                          |          
+                          |--8.27%--mm_align_pair
+                          |          |          
+                          |           --8.27%--ksw_extd2_sse
+                          |                     |          
+                          |                     |--2.22%--_mm_sub_epi8 (inlined)
+                          |                     |          vsubq_s8 (inlined)
+                          |                     |          
+                          |                     |--2.05%--ksw_backtrack (inlined)
+                          |                     |          
+                          |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                          |                     |          vcgtq_s8 (inlined)
+                          |                     |          
+                          |                     |--0.97%--_mm_and_si128 (inlined)
+                          |                     |          vandq_s32 (inlined)
+                          |                     |          
+                          |                      --0.69%--_mm_or_si128 (inlined)
+                          |                                vorrq_s32 (inlined)
+                          |          
+                          |--3.81%--mm_filter_bad_seeds (inlined)
+                          |          |          
+                          |           --3.69%--collect_long_gaps
+                          |          
+                          |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                          |          |          
+                          |           --3.65%--collect_long_gaps
+                          |          
+                           --1.61%--mm_split_reg
+                                     |          
+                                      --1.61%--mm_reg_set_coor (inlined)
+                                                |          
+                                                 --1.61%--mm_cal_fuzzy_len (inlined)
+
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+            |
+            ---mm_align_skeleton
+               |          
+                --17.55%--mm_align1
+                          |          
+                          |--8.27%--mm_align_pair
+                          |          |          
+                          |           --8.27%--ksw_extd2_sse
+                          |                     |          
+                          |                     |--2.22%--_mm_sub_epi8 (inlined)
+                          |                     |          vsubq_s8 (inlined)
+                          |                     |          
+                          |                     |--2.05%--ksw_backtrack (inlined)
+                          |                     |          
+                          |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                          |                     |          vcgtq_s8 (inlined)
+                          |                     |          
+                          |                     |--0.97%--_mm_and_si128 (inlined)
+                          |                     |          vandq_s32 (inlined)
+                          |                     |          
+                          |                      --0.69%--_mm_or_si128 (inlined)
+                          |                                vorrq_s32 (inlined)
+                          |          
+                          |--3.81%--mm_filter_bad_seeds (inlined)
+                          |          |          
+                          |           --3.69%--collect_long_gaps
+                          |          
+                          |--3.69%--mm_filter_bad_seeds_alt (inlined)
+                          |          |          
+                          |           --3.65%--collect_long_gaps
+                          |          
+                           --1.61%--mm_split_reg
+                                     |          
+                                      --1.61%--mm_reg_set_coor (inlined)
+                                                |          
+                                                 --1.61%--mm_cal_fuzzy_len (inlined)
+
+    17.55%     0.21%  [.] mm_align1                                       -      -            
+            |          
+             --17.34%--mm_align1
+                       |          
+                       |--8.27%--mm_align_pair
+                       |          |          
+                       |           --8.27%--ksw_extd2_sse
+                       |                     |          
+                       |                     |--2.22%--_mm_sub_epi8 (inlined)
+                       |                     |          vsubq_s8 (inlined)
+                       |                     |          
+                       |                     |--2.05%--ksw_backtrack (inlined)
+                       |                     |          
+                       |                     |--1.71%--_mm_cmpgt_epi8 (inlined)
+                       |                     |          vcgtq_s8 (inlined)
+                       |                     |          
+                       |                     |--0.97%--_mm_and_si128 (inlined)
+                       |                     |          vandq_s32 (inlined)
+                       |                     |          
+                       |                      --0.69%--_mm_or_si128 (inlined)
+                       |                                vorrq_s32 (inlined)
+                       |          
+                       |--3.69%--mm_filter_bad_seeds (inlined)
+                       |          |          
+                       |           --3.69%--collect_long_gaps
+                       |          
+                       |--3.66%--mm_filter_bad_seeds_alt (inlined)
+                       |          |          
+                       |           --3.65%--collect_long_gaps
+                       |          
+                        --1.61%--mm_split_reg
+                                  |          
+                                   --1.61%--mm_reg_set_coor (inlined)
+                                             |          
+                                              --1.61%--mm_cal_fuzzy_len (inlined)
+
+    16.60%     0.00%  [.] kh_get_idx (inlined)                            -      -            
+     8.27%     0.00%  [.] mm_align_pair                                   -      -            
+            |          
+             --8.27%--mm_align_pair
+                       |          
+                        --8.27%--ksw_extd2_sse
+                                  |          
+                                  |--2.22%--_mm_sub_epi8 (inlined)
+                                  |          vsubq_s8 (inlined)
+                                  |          
+                                  |--2.05%--ksw_backtrack (inlined)
+                                  |          
+                                  |--1.71%--_mm_cmpgt_epi8 (inlined)
+                                  |          vcgtq_s8 (inlined)
+                                  |          
+                                  |--0.97%--_mm_and_si128 (inlined)
+                                  |          vandq_s32 (inlined)
+                                  |          
+                                   --0.69%--_mm_or_si128 (inlined)
+                                             vorrq_s32 (inlined)
+
+     8.27%     5.96%  [.] ksw_extd2_sse                                   -      -            
+            |          
+            |--5.96%--thread_start
+            |          start_thread
+            |          ktf_worker
+            |          worker_for
+            |          mm_map_frag_core
+            |          align_regs (inlined)
+            |          align_regs (inlined)
+            |          mm_align_skeleton
+            |          |          
+            |           --5.96%--mm_align1
+            |                     mm_align_pair
+            |                     ksw_extd2_sse
+            |                     |          
+            |                     |--2.18%--_mm_sub_epi8 (inlined)
+            |                     |          vsubq_s8 (inlined)
+            |                     |          
+            |                     |--1.67%--_mm_cmpgt_epi8 (inlined)
+            |                     |          vcgtq_s8 (inlined)
+            |                     |          
+            |                     |--0.95%--_mm_and_si128 (inlined)
+            |                     |          vandq_s32 (inlined)
+            |                     |          
+            |                      --0.61%--_mm_or_si128 (inlined)
+            |                                vorrq_s32 (inlined)
+            |          
+             --2.31%--ksw_extd2_sse
+                       |          
+                        --2.05%--ksw_backtrack (inlined)
+
+     7.40%     0.00%  [.] ktp_worker                                      -      -            
+            |          
+             --7.40%--ktp_worker
+                       |          
+                        --7.28%--worker_pipeline
+                                  |          
+                                   --7.00%--mm_idx_add
+
+     7.28%     0.03%  [.] worker_pipeline                                 -      -            
+            |          
+             --7.25%--worker_pipeline
+                       |          
+                        --7.00%--mm_idx_add
+
+     7.01%     6.51%  [.] mm_idx_add                                      -      -            
+            |          
+             --6.51%--thread_start
+                       start_thread
+                       ktp_worker
+                       worker_pipeline
+                       mm_idx_add
+
+     6.83%     6.82%  [.] collect_long_gaps                               -      -            
+            |          
+             --6.82%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       mm_align1
+                       |          
+                       |--3.42%--mm_filter_bad_seeds (inlined)
+                       |          collect_long_gaps
+                       |          
+                        --3.39%--mm_filter_bad_seeds_alt (inlined)
+                                  collect_long_gaps
+
+     6.57%     4.84%  [.] compact_a                                       -      -            
+            |          
+            |--4.84%--thread_start
+            |          start_thread
+            |          ktf_worker
+            |          worker_for
+            |          mm_map_frag_core
+            |          compact_a
+            |          
+             --1.73%--compact_a
+                       |          
+                        --1.69%--memcpy (inlined)
+                                  |          
+                                   --1.69%--__memcpy_generic
+
+     4.58%     4.55%  [.] rs_sort_128x                                    -      -            
+            |          
+             --3.78%--rs_sort_128x
+                       |          
+                        --3.77%--rs_sort_128x
+
+     3.81%     0.00%  [.] mm_filter_bad_seeds (inlined)                   -      -            
+            |          
+             --3.69%--collect_long_gaps
+
+     3.69%     0.00%  [.] mm_filter_bad_seeds_alt (inlined)               -      -            
+            |          
+             --3.65%--collect_long_gaps
+
+     2.22%     0.00%  [.] _mm_sub_epi8 (inlined)                          -      -            
+            |
+            ---vsubq_s8 (inlined)
+
+     2.22%     0.00%  [.] vsubq_s8 (inlined)                              -      -            
+     2.05%     0.00%  [.] ksw_backtrack (inlined)                         -      -            
+     2.05%     2.05%  [.] ksw_backtrack.constprop.0                       -      -            
+            |
+            ---start_thread
+               ktf_worker
+               worker_for
+               mm_map_frag_core
+               align_regs (inlined)
+               align_regs (inlined)
+               mm_align_skeleton
+               |          
+                --2.05%--mm_align1
+                          mm_align_pair
+                          ksw_extd2_sse
+                          ksw_backtrack (inlined)
+
+     2.00%     1.90%  [.] __memcpy_generic                                -      -            
+            |          
+             --1.86%--thread_start
+                       start_thread
+                       |          
+                        --1.77%--ktf_worker
+                                  |          
+                                   --1.74%--worker_for
+                                             mm_map_frag_core
+                                             |          
+                                              --1.69%--compact_a
+                                                        memcpy (inlined)
+                                                        __memcpy_generic
+
+     1.71%     0.00%  [.] _mm_cmpgt_epi8 (inlined)                        -      -            
+            |
+            ---vcgtq_s8 (inlined)
+
+     1.71%     0.00%  [.] vcgtq_s8 (inlined)                              -      -            
+     1.70%     0.00%  [.] memcpy (inlined)                                -      -            
+            |          
+             --1.69%--__memcpy_generic
+
+     1.61%     1.61%  [.] mm_split_reg                                    -      -            
+            |          
+             --1.61%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       align_regs (inlined)
+                       align_regs (inlined)
+                       mm_align_skeleton
+                       mm_align1
+                       mm_split_reg
+                       |          
+                        --1.61%--mm_reg_set_coor (inlined)
+                                  |          
+                                   --1.61%--mm_cal_fuzzy_len (inlined)
+
+     1.61%     0.00%  [.] mm_reg_set_coor (inlined)                       -      -            
+            |          
+             --1.61%--mm_cal_fuzzy_len (inlined)
+
+     1.61%     0.00%  [.] mm_cal_fuzzy_len (inlined)                      -      -            
+     1.50%     0.00%  [k] el0t_64_sync                                    -      -            
+            |
+            ---el0t_64_sync_handler
+               |          
+                --1.37%--el0_da
+                          |          
+                           --1.03%--do_mem_abort
+                                     |          
+                                      --1.03%--do_translation_fault
+                                                |          
+                                                 --1.03%--do_page_fault
+                                                           |          
+                                                            --0.92%--handle_mm_fault
+                                                                      |          
+                                                                       --0.92%--__handle_mm_fault
+                                                                                 |          
+                                                                                  --0.91%--handle_pte_fault
+                                                                                            |          
+                                                                                             --0.89%--do_anonymous_page
+                                                                                                       |          
+                                                                                                        --0.82%--alloc_anon_folio
+                                                                                                                  |          
+                                                                                                                   --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                                                             |          
+                                                                                                                              --0.79%--vma_alloc_folio_noprof
+                                                                                                                                        |          
+                                                                                                                                         --0.78%--folio_alloc_mpol_noprof
+                                                                                                                                                   |          
+                                                                                                                                                    --0.78%--alloc_pages_mpol
+                                                                                                                                                              |          
+                                                                                                                                                               --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                                                         |          
+                                                                                                                                                                          --0.76%--get_page_from_freelist
+                                                                                                                                                                                    |          
+                                                                                                                                                                                     --0.70%--__pi_clear_page
+
+     1.50%     0.00%  [k] el0t_64_sync_handler                            -      -            
+            |          
+             --1.37%--el0_da
+                       |          
+                        --1.03%--do_mem_abort
+                                  |          
+                                   --1.03%--do_translation_fault
+                                             |          
+                                              --1.03%--do_page_fault
+                                                        |          
+                                                         --0.92%--handle_mm_fault
+                                                                   |          
+                                                                    --0.92%--__handle_mm_fault
+                                                                              |          
+                                                                               --0.91%--handle_pte_fault
+                                                                                         |          
+                                                                                          --0.89%--do_anonymous_page
+                                                                                                    |          
+                                                                                                     --0.82%--alloc_anon_folio
+                                                                                                               |          
+                                                                                                                --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                                                          |          
+                                                                                                                           --0.79%--vma_alloc_folio_noprof
+                                                                                                                                     |          
+                                                                                                                                      --0.78%--folio_alloc_mpol_noprof
+                                                                                                                                                |          
+                                                                                                                                                 --0.78%--alloc_pages_mpol
+                                                                                                                                                           |          
+                                                                                                                                                            --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                                                      |          
+                                                                                                                                                                       --0.76%--get_page_from_freelist
+                                                                                                                                                                                 |          
+                                                                                                                                                                                  --0.70%--__pi_clear_page
+
+     1.37%     0.33%  [k] el0_da                                          -      -            
+            |          
+             --1.03%--el0_da
+                       |          
+                        --1.03%--do_mem_abort
+                                  |          
+                                   --1.03%--do_translation_fault
+                                             |          
+                                              --1.03%--do_page_fault
+                                                        |          
+                                                         --0.92%--handle_mm_fault
+                                                                   |          
+                                                                    --0.92%--__handle_mm_fault
+                                                                              |          
+                                                                               --0.91%--handle_pte_fault
+                                                                                         |          
+                                                                                          --0.89%--do_anonymous_page
+                                                                                                    |          
+                                                                                                     --0.82%--alloc_anon_folio
+                                                                                                               |          
+                                                                                                                --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                                                          |          
+                                                                                                                           --0.79%--vma_alloc_folio_noprof
+                                                                                                                                     |          
+                                                                                                                                      --0.78%--folio_alloc_mpol_noprof
+                                                                                                                                                |          
+                                                                                                                                                 --0.78%--alloc_pages_mpol
+                                                                                                                                                           |          
+                                                                                                                                                            --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                                                      |          
+                                                                                                                                                                       --0.76%--get_page_from_freelist
+                                                                                                                                                                                 |          
+                                                                                                                                                                                  --0.70%--__pi_clear_page
+
+     1.03%     0.00%  [k] do_mem_abort                                    -      -            
+            |          
+             --1.03%--do_mem_abort
+                       |          
+                        --1.03%--do_translation_fault
+                                  |          
+                                   --1.03%--do_page_fault
+                                             |          
+                                              --0.92%--handle_mm_fault
+                                                        |          
+                                                         --0.92%--__handle_mm_fault
+                                                                   |          
+                                                                    --0.91%--handle_pte_fault
+                                                                              |          
+                                                                               --0.89%--do_anonymous_page
+                                                                                         |          
+                                                                                          --0.82%--alloc_anon_folio
+                                                                                                    |          
+                                                                                                     --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                                               |          
+                                                                                                                --0.79%--vma_alloc_folio_noprof
+                                                                                                                          |          
+                                                                                                                           --0.78%--folio_alloc_mpol_noprof
+                                                                                                                                     |          
+                                                                                                                                      --0.78%--alloc_pages_mpol
+                                                                                                                                                |          
+                                                                                                                                                 --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                                           |          
+                                                                                                                                                            --0.76%--get_page_from_freelist
+                                                                                                                                                                      |          
+                                                                                                                                                                       --0.70%--__pi_clear_page
+
+     1.03%     0.00%  [k] do_page_fault                                   -      -            
+            |          
+             --1.03%--do_page_fault
+                       |          
+                        --0.93%--handle_mm_fault
+                                  |          
+                                   --0.92%--__handle_mm_fault
+                                             |          
+                                              --0.92%--handle_pte_fault
+                                                        |          
+                                                         --0.89%--do_anonymous_page
+                                                                   |          
+                                                                    --0.82%--alloc_anon_folio
+                                                                              |          
+                                                                               --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                         |          
+                                                                                          --0.79%--vma_alloc_folio_noprof
+                                                                                                    |          
+                                                                                                     --0.78%--folio_alloc_mpol_noprof
+                                                                                                               |          
+                                                                                                                --0.78%--alloc_pages_mpol
+                                                                                                                          |          
+                                                                                                                           --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                     |          
+                                                                                                                                      --0.76%--get_page_from_freelist
+                                                                                                                                                |          
+                                                                                                                                                 --0.70%--__pi_clear_page
+
+     1.03%     0.00%  [k] do_translation_fault                            -      -            
+            |          
+             --1.03%--do_translation_fault
+                       |          
+                        --1.03%--do_page_fault
+                                  |          
+                                   --0.92%--handle_mm_fault
+                                             |          
+                                              --0.92%--__handle_mm_fault
+                                                        |          
+                                                         --0.91%--handle_pte_fault
+                                                                   |          
+                                                                    --0.89%--do_anonymous_page
+                                                                              |          
+                                                                               --0.82%--alloc_anon_folio
+                                                                                         |          
+                                                                                          --0.79%--vma_alloc_zeroed_movable_folio
+                                                                                                    |          
+                                                                                                     --0.79%--vma_alloc_folio_noprof
+                                                                                                               |          
+                                                                                                                --0.78%--folio_alloc_mpol_noprof
+                                                                                                                          |          
+                                                                                                                           --0.78%--alloc_pages_mpol
+                                                                                                                                     |          
+                                                                                                                                      --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                                                |          
+                                                                                                                                                 --0.76%--get_page_from_freelist
+                                                                                                                                                           |          
+                                                                                                                                                            --0.70%--__pi_clear_page
+
+     0.97%     0.00%  [.] _mm_and_si128 (inlined)                         -      -            
+            |
+            ---vandq_s32 (inlined)
+
+     0.97%     0.00%  [.] vandq_s32 (inlined)                             -      -            
+     0.93%     0.00%  [k] handle_mm_fault                                 -      -            
+            |          
+             --0.93%--handle_mm_fault
+                       |          
+                        --0.92%--__handle_mm_fault
+                                  |          
+                                   --0.92%--handle_pte_fault
+                                             |          
+                                              --0.89%--do_anonymous_page
+                                                        |          
+                                                         --0.82%--alloc_anon_folio
+                                                                   |          
+                                                                    --0.79%--vma_alloc_zeroed_movable_folio
+                                                                              |          
+                                                                               --0.79%--vma_alloc_folio_noprof
+                                                                                         |          
+                                                                                          --0.78%--folio_alloc_mpol_noprof
+                                                                                                    |          
+                                                                                                     --0.78%--alloc_pages_mpol
+                                                                                                               |          
+                                                                                                                --0.77%--__alloc_frozen_pages_noprof
+                                                                                                                          |          
+                                                                                                                           --0.76%--get_page_from_freelist
+                                                                                                                                     |          
+                                                                                                                                      --0.70%--__pi_clear_page
+
+     0.92%     0.01%  [k] __handle_mm_fault                               -      -            
+            |          
+             --0.92%--__handle_mm_fault
+                       |          
+                        --0.92%--handle_pte_fault
+                                  |          
+                                   --0.89%--do_anonymous_page
+                                             |          
+                                              --0.82%--alloc_anon_folio
+                                                        |          
+                                                         --0.79%--vma_alloc_zeroed_movable_folio
+                                                                   |          
+                                                                    --0.79%--vma_alloc_folio_noprof
+                                                                              |          
+                                                                               --0.78%--folio_alloc_mpol_noprof
+                                                                                         |          
+                                                                                          --0.78%--alloc_pages_mpol
+                                                                                                    |          
+                                                                                                     --0.77%--__alloc_frozen_pages_noprof
+                                                                                                               |          
+                                                                                                                --0.76%--get_page_from_freelist
+                                                                                                                          |          
+                                                                                                                           --0.70%--__pi_clear_page
+
+     0.92%     0.01%  [k] handle_pte_fault                                -      -            
+            |          
+             --0.91%--handle_pte_fault
+                       |          
+                        --0.89%--do_anonymous_page
+                                  |          
+                                   --0.82%--alloc_anon_folio
+                                             |          
+                                              --0.79%--vma_alloc_zeroed_movable_folio
+                                                        |          
+                                                         --0.79%--vma_alloc_folio_noprof
+                                                                   |          
+                                                                    --0.78%--folio_alloc_mpol_noprof
+                                                                              |          
+                                                                               --0.78%--alloc_pages_mpol
+                                                                                         |          
+                                                                                          --0.77%--__alloc_frozen_pages_noprof
+                                                                                                    |          
+                                                                                                     --0.76%--get_page_from_freelist
+                                                                                                               |          
+                                                                                                                --0.70%--__pi_clear_page
+
+     0.89%     0.00%  [k] do_anonymous_page                               -      -            
+            |          
+             --0.89%--do_anonymous_page
+                       |          
+                        --0.82%--alloc_anon_folio
+                                  |          
+                                   --0.79%--vma_alloc_zeroed_movable_folio
+                                             |          
+                                              --0.79%--vma_alloc_folio_noprof
+                                                        |          
+                                                         --0.78%--folio_alloc_mpol_noprof
+                                                                   |          
+                                                                    --0.78%--alloc_pages_mpol
+                                                                              |          
+                                                                               --0.77%--__alloc_frozen_pages_noprof
+                                                                                         |          
+                                                                                          --0.76%--get_page_from_freelist
+                                                                                                    |          
+                                                                                                     --0.70%--__pi_clear_page
+
+     0.82%     0.00%  [k] alloc_anon_folio                                -      -            
+            |          
+             --0.81%--alloc_anon_folio
+                       |          
+                        --0.79%--vma_alloc_zeroed_movable_folio
+                                  |          
+                                   --0.79%--vma_alloc_folio_noprof
+                                             |          
+                                              --0.78%--folio_alloc_mpol_noprof
+                                                        |          
+                                                         --0.78%--alloc_pages_mpol
+                                                                   |          
+                                                                    --0.77%--__alloc_frozen_pages_noprof
+                                                                              |          
+                                                                               --0.76%--get_page_from_freelist
+                                                                                         |          
+                                                                                          --0.70%--__pi_clear_page
+
+     0.80%     0.00%  [k] vma_alloc_zeroed_movable_folio                  -      -            
+            |          
+             --0.80%--vma_alloc_zeroed_movable_folio
+                       |          
+                        --0.80%--vma_alloc_folio_noprof
+                                  |          
+                                   --0.79%--folio_alloc_mpol_noprof
+                                             |          
+                                              --0.79%--alloc_pages_mpol
+                                                        |          
+                                                         --0.78%--__alloc_frozen_pages_noprof
+                                                                   |          
+                                                                    --0.77%--get_page_from_freelist
+                                                                              |          
+                                                                               --0.70%--__pi_clear_page
+
+     0.80%     0.00%  [k] vma_alloc_folio_noprof                          -      -            
+            |          
+             --0.80%--vma_alloc_folio_noprof
+                       |          
+                        --0.79%--folio_alloc_mpol_noprof
+                                  |          
+                                   --0.79%--alloc_pages_mpol
+                                             |          
+                                              --0.78%--__alloc_frozen_pages_noprof
+                                                        |          
+                                                         --0.77%--get_page_from_freelist
+                                                                   |          
+                                                                    --0.70%--__pi_clear_page
+
+     0.80%     0.00%  [k] alloc_pages_mpol                                -      -            
+            |          
+             --0.80%--alloc_pages_mpol
+                       |          
+                        --0.79%--__alloc_frozen_pages_noprof
+                                  |          
+                                   --0.78%--get_page_from_freelist
+                                             |          
+                                              --0.71%--__pi_clear_page
+
+     0.79%     0.01%  [k] __alloc_frozen_pages_noprof                     -      -            
+            |          
+             --0.78%--__alloc_frozen_pages_noprof
+                       |          
+                        --0.78%--get_page_from_freelist
+                                  |          
+                                   --0.71%--__pi_clear_page
+
+     0.79%     0.00%  [k] folio_alloc_mpol_noprof                         -      -            
+            |          
+             --0.79%--folio_alloc_mpol_noprof
+                       |          
+                        --0.79%--alloc_pages_mpol
+                                  |          
+                                   --0.78%--__alloc_frozen_pages_noprof
+                                             |          
+                                              --0.77%--get_page_from_freelist
+                                                        |          
+                                                         --0.70%--__pi_clear_page
+
+     0.78%     0.01%  [k] get_page_from_freelist                          -      -            
+            |          
+             --0.77%--get_page_from_freelist
+                       |          
+                        --0.71%--__pi_clear_page
+
+     0.71%     0.71%  [k] __pi_clear_page                                 -      -            
+            |          
+             --0.66%--thread_start
+                       start_thread
+                       |          
+                        --0.56%--ktf_worker
+                                  |          
+                                   --0.50%--worker_for
+                                             mm_map_frag_core
+
+     0.69%     0.00%  [.] _mm_or_si128 (inlined)                          -      -            
+            |
+            ---vorrq_s32 (inlined)
+
+     0.69%     0.00%  [.] vorrq_s32 (inlined)                             -      -            
+     0.68%     0.64%  [.] mm_gen_regs                                     -      -            
+            |          
+             --0.64%--thread_start
+                       start_thread
+                       ktf_worker
+                       worker_for
+                       mm_map_frag_core
+                       mm_gen_regs
+                       |          
+                        --0.61%--mm_reg_set_coor (inlined)
+
+     0.62%     0.00%  [.] mm_reg_set_coor (inlined)                       -      -            
+     0.52%     0.52%  [.] collect_long_gaps                               -      -            
+            |
+            ---start_thread
+               ktf_worker
+               worker_for
+               mm_map_frag_core
+               align_regs (inlined)
+               align_regs (inlined)
+               mm_align_skeleton
+               mm_align1
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

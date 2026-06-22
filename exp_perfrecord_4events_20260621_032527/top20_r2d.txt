@@ -1,0 +1,21 @@
+=== Top 20 for r2d ===
+    95.79%     0.00%  [.] start_thread                                    -      -            
+    95.28%     0.00%  [.] thread_start                                    -      -            
+    88.47%     0.00%  [.] worker_for                                      -      -            
+    88.47%     0.03%  [.] mm_map_frag_core                                -      -            
+    88.45%     0.00%  [.] ktf_worker                                      -      -            
+    35.93%     0.24%  [.] mg_lchain_rmq                                   -      -            
+    35.16%     9.57%  [.] mg_chain_backtrack                              -      -            
+    26.98%     6.54%  [.] collect_seed_hits                               -      -            
+    25.18%    25.16%  [.] mg_chain_bk_end                                 -      -            
+    19.87%     0.15%  [.] mm_collect_matches                              -      -            
+    19.67%     0.27%  [.] mm_seed_collect_all                             -      -            
+    19.26%    19.26%  [.] mm_idx_get                                      -      -            
+    17.67%     0.06%  [.] mm_align_skeleton                               -      -            
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+    17.55%     0.21%  [.] mm_align1                                       -      -            
+    16.60%     0.00%  [.] kh_get_idx (inlined)                            -      -            
+     8.27%     0.00%  [.] mm_align_pair                                   -      -            
+     8.27%     5.96%  [.] ksw_extd2_sse                                   -      -            
+     7.40%     0.00%  [.] ktp_worker                                      -      -            

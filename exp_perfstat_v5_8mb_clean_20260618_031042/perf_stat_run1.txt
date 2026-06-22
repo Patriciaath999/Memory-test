@@ -1,0 +1,18 @@
+# started on Thu Jun 18 03:10:48 2026
+
+
+ Performance counter stats for '/home/nancy/minimap2/minimap2.v5_8mb_clean -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+22,549,168,857,943      cycles                                                                
+20,264,967,292,576      instructions                     #    0.90  insn per cycle            
+ 6,456,759,425,102      stall_backend                                                         
+   314,113,851,599      l1d_cache_refill                                                      
+   154,831,327,175      l2d_cache_refill                                                      
+    14,803,645,014      l2d_tlb_refill                                                        
+
+    3167.085253912 seconds time elapsed
+
+    8924.097130000 seconds user
+      93.994476000 seconds sys
+
+

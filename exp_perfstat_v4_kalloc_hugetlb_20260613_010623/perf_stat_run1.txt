@@ -1,0 +1,18 @@
+# started on Sat Jun 13 01:06:29 2026
+
+
+ Performance counter stats for '/home/nancy/minimap2/minimap2.v4_kalloc_hugetlb -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+22,659,686,922,052      cycles                                                                
+20,340,883,092,237      instructions                     #    0.90  insn per cycle            
+ 6,492,018,042,675      stall_backend                                                         
+   313,594,639,278      l1d_cache_refill                                                      
+   156,506,882,917      l2d_cache_refill                                                      
+    14,759,731,050      l2d_tlb_refill                                                        
+
+    3176.821822345 seconds time elapsed
+
+    8953.687623000 seconds user
+      91.718566000 seconds sys
+
+

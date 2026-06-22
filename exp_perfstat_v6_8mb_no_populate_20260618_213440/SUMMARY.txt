@@ -1,0 +1,41 @@
+perf-stat Summary: TAG=v6_8mb_no_populate MM2_BIN=/home/nancy/minimap2/minimap2.v6_8mb_no_populate
+Completed at Thu Jun 18 10:27:28 PM CST 2026
+PERF_EVENTS=cycles,instructions,stall_backend,l1d_cache_refill,l2d_cache_refill,l2d_tlb_refill
+## Counter coverage check:
+--- Counter coverage check for run1 ---
+
+--- run1 ---
+# started on Thu Jun 18 21:34:45 2026
+
+
+ Performance counter stats for '/home/nancy/minimap2/minimap2.v6_8mb_no_populate -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz':
+
+22,559,033,984,964      cycles                                                                
+20,268,575,542,023      instructions                     #    0.90  insn per cycle            
+ 6,470,002,702,461      stall_backend                                                         
+   313,629,923,929      l1d_cache_refill                                                      
+   171,178,551,029      l2d_cache_refill                                                      
+    14,776,084,547      l2d_tlb_refill                                                        
+
+    3162.997635657 seconds time elapsed
+
+    8928.901621000 seconds user
+      93.255141000 seconds sys
+
+
+## Files:
+total 7.3M
+-rw-rw-r-- 1 nancy nancy  161 Jun 18 22:27 experiment.log
+-rw-rw-r-- 1 nancy nancy  297 Jun 18 22:27 meminfo_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  297 Jun 18 21:34 meminfo_before_run1.txt
+-rw-rw-r-- 1 nancy nancy 1.1K Jun 18 22:27 minimap2_stderr_run1.txt
+-rw-rw-r-- 1 nancy nancy   41 Jun 18 22:27 multiplex_check.log
+-rw-rw-r-- 1 nancy nancy 7.3M Jun 18 22:27 output_run1.paf
+-rw-rw-r-- 1 nancy nancy  919 Jun 18 22:27 perf_stat_run1.txt
+-rw-rw-r-- 1 nancy nancy 1.3K Jun 18 22:27 SUMMARY.txt
+-rw-rw-r-- 1 nancy nancy  641 Jun 18 21:34 system_info.txt
+-rw-rw-r-- 1 nancy nancy   23 Jun 18 21:34 thp_setting.txt
+-rw-rw-r-- 1 nancy nancy 1.1K Jun 18 22:27 time_run1.txt
+-rw-rw-r-- 1 nancy nancy  783 Jun 18 22:27 vmstat_after_run1.txt
+-rw-rw-r-- 1 nancy nancy  783 Jun 18 21:34 vmstat_before_run1.txt
+-rw-rw-r-- 1 nancy nancy   90 Jun 18 22:27 vmstat_diff_run1.txt

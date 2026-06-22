@@ -1,0 +1,22 @@
+### Date
+Thu Jun 18 03:10:42 AM CST 2026
+### Binary under test
+MM2_BIN = /home/nancy/minimap2/minimap2.v5_8mb_clean
+TAG     = v5_8mb_clean
+19e190660efdfaec2f19216ba4d0bde6  /home/nancy/minimap2/minimap2.v5_8mb_clean
+### THP global setting (will be set to never)
+always [madvise] never
+### HugePages
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+### minimap2 (the binary under test)
+2.30-r1299-dirty
+### perf
+perf version 6.14.11

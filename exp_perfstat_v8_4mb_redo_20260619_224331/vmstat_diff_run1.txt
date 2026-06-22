@@ -1,0 +1,6 @@
+1,2c1,2
+< pgfault 317021743
+< pgmajfault 14154
+---
+> pgfault 345676009
+> pgmajfault 14277

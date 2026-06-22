@@ -1,0 +1,69 @@
+[M::mm_idx_gen::66.720*1.75] collected minimizers
+[M::mm_idx_gen::70.005*2.53] sorted minimizers
+[M::main::70.005*2.53] loaded/built the index for 25 target sequence(s)
+[M::mm_mapopt_update::76.624*2.40] mid_occ = 177
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 25
+[M::mm_idx_stat::81.882*2.31] distinct minimizers: 215125355 (92.06% are singletons); average occurrences: 1.455; average spacing: 9.958; total length: 3117292070
+[Profile] n = 96125530, Peak RMQ Size = 35500 nodes, Required Pool = 1.90 MB
+[Profile] n = 112454037, Peak RMQ Size = 51510 nodes, Required Pool = 2.75 MB
+[Profile] n = 29686680, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 34949503, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 147783869, Peak RMQ Size = 85836 nodes, Required Pool = 4.58 MB
+[Profile] n = 44759274, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[M::worker_pipeline::1121.088*1.87] mapped 3 sequences
+[Profile] n = 83209216, Peak RMQ Size = 95020 nodes, Required Pool = 5.07 MB
+[Profile] n = 95292398, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 97424434, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 25450289, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 26962889, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 32323930, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[M::worker_pipeline::1633.157*2.09] mapped 3 sequences
+[Profile] n = 67062435, Peak RMQ Size = 95536 nodes, Required Pool = 5.10 MB
+[Profile] n = 74382828, Peak RMQ Size = 52976 nodes, Required Pool = 2.83 MB
+[Profile] n = 73479647, Peak RMQ Size = 52984 nodes, Required Pool = 2.83 MB
+[Profile] n = 83600257, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 19816848, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 22113483, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 25535732, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 25507736, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[M::worker_pipeline::2005.713*2.35] mapped 4 sequences
+[Profile] n = 65973045, Peak RMQ Size = 31462 nodes, Required Pool = 1.68 MB
+[Profile] n = 64992000, Peak RMQ Size = 71120 nodes, Required Pool = 3.80 MB
+[Profile] n = 60949896, Peak RMQ Size = 40478 nodes, Required Pool = 2.16 MB
+[Profile] n = 66937163, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 17117563, Peak RMQ Size = 99744 nodes, Required Pool = 5.33 MB
+[Profile] n = 18138215, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 64863380, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 23686036, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 24872245, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 29079480, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[M::worker_pipeline::2460.228*2.68] mapped 5 sequences
+[Profile] n = 27250713, Peak RMQ Size = 48540 nodes, Required Pool = 2.59 MB
+[Profile] n = 35441736, Peak RMQ Size = 41372 nodes, Required Pool = 2.21 MB
+[Profile] n = 46404628, Peak RMQ Size = 55896 nodes, Required Pool = 2.99 MB
+[Profile] n = 40389883, Peak RMQ Size = 94351 nodes, Required Pool = 5.04 MB
+[Profile] n = 11443705, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 45192455, Peak RMQ Size = 59729 nodes, Required Pool = 3.19 MB
+[Profile] n = 12086528, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 44847010, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 60272778, Peak RMQ Size = 59212 nodes, Required Pool = 3.16 MB
+[Profile] n = 14652834, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 12908106, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 15238556, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 25506831, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 22542266, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[Profile] n = 105042684, Peak RMQ Size = 56028 nodes, Required Pool = 2.99 MB
+[Profile] n = 66113575, Peak RMQ Size = 100000 nodes, Required Pool = 5.34 MB
+[M::worker_pipeline::3174.881*2.85] mapped 8 sequences
+[M::main] Version: 2.30-r1299-dirty
+[M::main] CMD: /home/nancy/minimap2/minimap2.v4_kalloc_hugetlb -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz
+[M::main] Real time: 3176.481 sec; CPU: 9045.069 sec; Peak RSS: 29.073 GB
+
+=== [kalloc hugetlb stats] ===
+  Hugetlb cores allocated:   33
+  Hugetlb cores mmap-failed: 183
+  Cores too small (skipped): 358
+  Registry-full failures:    0
+  Leftover (leaked) cores:   0
+  Total hugetlb bytes:       4466.00 MB
+==============================

@@ -1,0 +1,96 @@
+================================================
+4 Events Profiling Summary
+目錄: exp_perfrecord_4events_20260621_032527
+================================================
+
+## 🏆 導致 [ r03 ] 最嚴重的 Top 20 函式 🏆 ##
+=== Top 20 for r03 ===
+    93.56%     0.00%  [.] start_thread                            -      -            
+    93.02%     0.00%  [.] thread_start                            -      -            
+    92.08%     0.00%  [.] ktf_worker                              -      -            
+    91.81%     0.03%  [.] mm_map_frag_core                        -      -            
+    83.18%     0.00%  [.] worker_for                              -      -            
+    42.91%     8.60%  [.] mg_lchain_rmq                           -      -            
+    42.40%     0.00%  [.] align_regs (inlined)                    -      -            
+    42.40%     0.00%  [.] align_regs (inlined)                    -      -            
+    42.40%     0.07%  [.] mm_align_skeleton                       -      -            
+    42.23%     0.38%  [.] mm_align1                               -      -            
+    27.27%     0.02%  [.] mm_align_pair                           -      -            
+    27.20%    25.62%  [.] ksw_extd2_sse                           -      -            
+    10.67%     0.00%  [.] _mm_or_si128 (inlined)                  -      -            
+    10.67%     0.00%  [.] vorrq_s32 (inlined)                     -      -            
+     9.19%     9.19%  [.] collect_long_gaps                       -      -            
+     8.63%     0.00%  [.] worker_for                              -      -            
+     8.07%     8.02%  [.] krmq_insert_lc_elem                     -      -            
+     7.90%     7.90%  [.] krmq_rmq_lc_elem                        -      -            
+     6.99%     6.84%  [.] rs_sort_128x                            -      -            
+     6.64%     6.61%  [.] krmq_erase_lc_elem                      -      -            
+
+## 🏆 導致 [ r17 ] 最嚴重的 Top 20 函式 🏆 ##
+=== Top 20 for r17 ===
+    94.95%     0.00%  [.] start_thread                             -      -            
+    94.25%     0.00%  [.] thread_start                             -      -            
+    92.91%     0.00%  [.] ktf_worker                               -      -            
+    92.07%     0.00%  [.] worker_for                               -      -            
+    92.07%     0.04%  [.] mm_map_frag_core                         -      -            
+    57.80%    11.06%  [.] mg_lchain_rmq                            -      -            
+    25.01%     0.04%  [.] mm_align_skeleton                        -      -            
+    25.01%     0.00%  [.] align_regs (inlined)                     -      -            
+    25.01%     0.00%  [.] align_regs (inlined)                     -      -            
+    24.85%     0.27%  [.] mm_align1                                -      -            
+    18.76%     0.02%  [.] mm_align_pair                            -      -            
+    18.75%    17.75%  [.] ksw_extd2_sse                            -      -            
+    11.23%    11.22%  [.] krmq_rmq_lc_elem                         -      -            
+    11.04%    10.97%  [.] krmq_insert_lc_elem                      -      -            
+     9.42%     9.37%  [.] krmq_erase_lc_elem                       -      -            
+     8.27%     2.10%  [.] mg_chain_backtrack                       -      -            
+     6.47%     0.00%  [.] comput_sc_simple (inlined)               -      -            
+     5.72%     0.00%  [.] _mm_or_si128 (inlined)                   -      -            
+     5.72%     0.00%  [.] vorrq_s32 (inlined)                      -      -            
+     5.57%     5.56%  [.] mg_chain_bk_end                          -      -            
+
+## 🏆 導致 [ r2d ] 最嚴重的 Top 20 函式 🏆 ##
+=== Top 20 for r2d ===
+    95.79%     0.00%  [.] start_thread                                    -      -            
+    95.28%     0.00%  [.] thread_start                                    -      -            
+    88.47%     0.00%  [.] worker_for                                      -      -            
+    88.47%     0.03%  [.] mm_map_frag_core                                -      -            
+    88.45%     0.00%  [.] ktf_worker                                      -      -            
+    35.93%     0.24%  [.] mg_lchain_rmq                                   -      -            
+    35.16%     9.57%  [.] mg_chain_backtrack                              -      -            
+    26.98%     6.54%  [.] collect_seed_hits                               -      -            
+    25.18%    25.16%  [.] mg_chain_bk_end                                 -      -            
+    19.87%     0.15%  [.] mm_collect_matches                              -      -            
+    19.67%     0.27%  [.] mm_seed_collect_all                             -      -            
+    19.26%    19.26%  [.] mm_idx_get                                      -      -            
+    17.67%     0.06%  [.] mm_align_skeleton                               -      -            
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+    17.67%     0.00%  [.] align_regs (inlined)                            -      -            
+    17.55%     0.21%  [.] mm_align1                                       -      -            
+    16.60%     0.00%  [.] kh_get_idx (inlined)                            -      -            
+     8.27%     0.00%  [.] mm_align_pair                                   -      -            
+     8.27%     5.96%  [.] ksw_extd2_sse                                   -      -            
+     7.40%     0.00%  [.] ktp_worker                                      -      -            
+
+## 🏆 導致 [ r24 ] 最嚴重的 Top 20 函式 🏆 ##
+=== Top 20 for r24 ===
+    92.01%     0.00%  [.] start_thread                           -      -            
+    91.17%     0.00%  [.] worker_for                             -      -            
+    91.17%     0.02%  [.] mm_map_frag_core                       -      -            
+    91.07%     0.00%  [.] ktf_worker                             -      -            
+    91.00%     0.00%  [.] thread_start                           -      -            
+    60.14%     0.00%  [.] align_regs (inlined)                   -      -            
+    60.14%     0.00%  [.] align_regs (inlined)                   -      -            
+    60.14%     0.04%  [.] mm_align_skeleton                      -      -            
+    60.06%     0.11%  [.] mm_align1                              -      -            
+    51.72%     0.00%  [.] mm_align_pair                          -      -            
+    47.86%    47.55%  [.] ksw_extd2_sse                          -      -            
+    25.87%     3.93%  [.] mg_lchain_rmq                          -      -            
+    17.87%     0.00%  [.] _mm_or_si128 (inlined)                 -      -            
+    17.87%     0.00%  [.] vorrq_s32 (inlined)                    -      -            
+     8.81%     8.64%  [.] rs_sort_128x                           -      -            
+     8.79%     0.00%  [.] _mm_sub_epi8 (inlined)                 -      -            
+     8.79%     0.00%  [.] vsubq_s8 (inlined)                     -      -            
+     8.50%     0.00%  [.] _mm_cmpgt_epi8 (inlined)               -      -            
+     8.50%     0.00%  [.] vcgtq_s8 (inlined)                     -      -            
+     6.26%     6.20%  [.] krmq_erase_lc_elem                     -      -            

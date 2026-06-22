@@ -1,0 +1,21 @@
+### Date
+Sat Jun 20 01:22:09 AM CST 2026
+### Binary under test
+MM2_BIN = /home/nancy/minimap2/minimap2.v3_8mb
+TAG     = v3_8mb
+(binary not found?)
+### THP global setting (will be set to never)
+always [madvise] never
+### HugePages
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+FileHugePages:         0 kB
+HugePages_Total:     512
+HugePages_Free:      512
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:         1048576 kB
+### minimap2 (the binary under test)
+### perf
+perf version 6.14.11

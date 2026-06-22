@@ -1,0 +1,21 @@
+=== Top 20 for r17 ===
+    94.95%     0.00%  [.] start_thread                             -      -            
+    94.25%     0.00%  [.] thread_start                             -      -            
+    92.91%     0.00%  [.] ktf_worker                               -      -            
+    92.07%     0.00%  [.] worker_for                               -      -            
+    92.07%     0.04%  [.] mm_map_frag_core                         -      -            
+    57.80%    11.06%  [.] mg_lchain_rmq                            -      -            
+    25.01%     0.04%  [.] mm_align_skeleton                        -      -            
+    25.01%     0.00%  [.] align_regs (inlined)                     -      -            
+    25.01%     0.00%  [.] align_regs (inlined)                     -      -            
+    24.85%     0.27%  [.] mm_align1                                -      -            
+    18.76%     0.02%  [.] mm_align_pair                            -      -            
+    18.75%    17.75%  [.] ksw_extd2_sse                            -      -            
+    11.23%    11.22%  [.] krmq_rmq_lc_elem                         -      -            
+    11.04%    10.97%  [.] krmq_insert_lc_elem                      -      -            
+     9.42%     9.37%  [.] krmq_erase_lc_elem                       -      -            
+     8.27%     2.10%  [.] mg_chain_backtrack                       -      -            
+     6.47%     0.00%  [.] comput_sc_simple (inlined)               -      -            
+     5.72%     0.00%  [.] _mm_or_si128 (inlined)                   -      -            
+     5.72%     0.00%  [.] vorrq_s32 (inlined)                      -      -            
+     5.57%     5.56%  [.] mg_chain_bk_end                          -      -            

@@ -1,0 +1,15 @@
+[M::mm_idx_gen::66.727*1.74] collected minimizers
+[M::mm_idx_gen::69.991*2.53] sorted minimizers
+[M::main::69.991*2.53] loaded/built the index for 25 target sequence(s)
+[M::mm_mapopt_update::76.573*2.40] mid_occ = 177
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 25
+[M::mm_idx_stat::81.795*2.31] distinct minimizers: 215125355 (92.06% are singletons); average occurrences: 1.455; average spacing: 9.958; total length: 3117292070
+[mg_lchain_rmq] MAP_HUGETLB failed (errno=12, Cannot allocate memory); falling back to kalloc.
+[M::worker_pipeline::1122.672*1.87] mapped 3 sequences
+[M::worker_pipeline::1632.829*2.08] mapped 3 sequences
+[M::worker_pipeline::2004.643*2.34] mapped 4 sequences
+[M::worker_pipeline::2456.003*2.68] mapped 5 sequences
+[M::worker_pipeline::3165.208*2.85] mapped 8 sequences
+[M::main] Version: 2.30-r1299-dirty
+[M::main] CMD: /home/nancy/minimap2/minimap2.v5_8mb_clean -t 48 -cx asm5 ../GCA_009914755.4_T2T-CHM13v2.0_genomic.fna.gz ../GCA_018852605.2_Q100_hg002v1.0.1.pat_genomic.fna.gz
+[M::main] Real time: 3166.667 sec; CPU: 9017.678 sec; Peak RSS: 29.875 GB

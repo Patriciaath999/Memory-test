@@ -1,2 +1,4 @@
-*.data
 *.paf
+*.data
+*.bam
+*.gz
